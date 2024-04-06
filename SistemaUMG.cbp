@@ -35,8 +35,10 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Alumno.h" />
+		<Unit filename="include/Tesoreria.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Alumno.cpp" />
+		<Unit filename="src/Tesoreria.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>
