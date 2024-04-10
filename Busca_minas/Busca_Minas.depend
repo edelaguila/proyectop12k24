@@ -1,0 +1,38 @@
+# depslib dependency file v1.0
+1712444773 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\2do. semestre programas de codeblocks\busca_minas\main.cpp
+	<iostream>
+	<unistd.h>
+	"Juego.h"
+	"Config.h"
+
+1712503146 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\2do. semestre programas de codeblocks\busca_minas\src\juego.cpp
+	"Juego.h"
+	<fstream>
+	<iostream>
+	<unistd.h>
+
+1712502853 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\2do. semestre programas de codeblocks\busca_minas\include\juego.h
+	"Tablero.h"
+
+1712502713 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\2do. semestre programas de codeblocks\busca_minas\src\tablero.cpp
+	"Tablero.h"
+	<sstream>
+	<iostream>
+
+1712501214 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\2do. semestre programas de codeblocks\busca_minas\include\tablero.h
+	<iostream>
+	<vector>
+	"Celda.h"
+
+1712499771 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\2do. semestre programas de codeblocks\busca_minas\src\celda.cpp
+	"Celda.h"
+	<iostream>
+
+1712499337 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\2do. semestre programas de codeblocks\busca_minas\include\celda.h
+
+1712500571 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\2do. semestre programas de codeblocks\busca_minas\src\config.cpp
+	"Config.h"
+	<iostream>
+
+1712500003 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\2do. semestre programas de codeblocks\busca_minas\include\config.h
+
