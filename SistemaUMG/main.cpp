@@ -1,11 +1,14 @@
-#include <iostream>
-#include<fstream>
+//sistema UMG
+#include <iostream>//libreria para uso de strings
+#include<fstream>//libreria uso metodos files
+//implementacion de clases:
+
 
 
 using namespace std;
 
-int main()
+int main()//inicio del main
 {
-    cout << "Hello  world!" << endl;
+
     return 0;
 }
