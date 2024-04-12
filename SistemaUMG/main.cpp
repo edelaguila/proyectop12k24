@@ -1,12 +1,11 @@
-//Sistema UMG
 #include <iostream>
 
 
 
 using namespace std;
 
-int main()
+int main()//inicio del main
 {
-    cout << "Hello world!" << endl;
+//primer menu ingreso de sistema
     return 0;
 }
