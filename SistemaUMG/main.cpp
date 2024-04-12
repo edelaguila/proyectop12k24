@@ -1,7 +1,4 @@
-//sistema UMG
-#include <iostream>//libreria para uso de strings
-#include<fstream>//libreria uso metodos files
-//implementacion de clases:
+#include <iostream>
 
 
 
@@ -10,13 +7,5 @@ using namespace std;
 int main()//inicio del main
 {
 //primer menu ingreso de sistema
-
-
-
-
-
-
-
-
     return 0;
 }
