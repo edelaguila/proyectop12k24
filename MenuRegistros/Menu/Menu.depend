@@ -1,0 +1,40 @@
+# depslib dependency file v1.0
+1712955932 source:c:\users\oskar\onedrive\escritorio\tercer semestre\menu\main.cpp
+	<iostream>
+	"persona.h"
+	"maestros.h"
+
+1712953579 c:\users\oskar\onedrive\escritorio\tercer semestre\menu\include\persona.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1712957498 source:c:\users\oskar\onedrive\escritorio\tercer semestre\menu\src\persona.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1712957498 source:c:\users\oskar\onedrive\escritorio\tercer semestre\menu\src\maestros.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1712954899 c:\users\oskar\onedrive\escritorio\tercer semestre\menu\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
