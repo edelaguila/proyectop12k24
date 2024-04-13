@@ -38,3 +38,42 @@
 	<conio.h>
 	<iomanip>
 
+1712986168 source:d:\menuregistros\menu\main.cpp
+	<iostream>
+	"persona.h"
+	"maestros.h"
+
+1712983129 d:\menuregistros\menu\include\persona.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1712983129 d:\menuregistros\menu\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1712983129 source:d:\menuregistros\menu\src\maestros.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1712986434 source:d:\menuregistros\menu\src\persona.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+

@@ -11,7 +11,7 @@ using namespace std;
 class persona
 {
 	private:
-		string id,name,phone,college,address;
+		string id, nombre, telefono, universidad, direccion;
 	public:
 		void menu();
 		void insertar();
@@ -22,242 +22,243 @@ class persona
 };
 void persona::menu()
 {
-    int choice;
-	char x;
+    int opcion;
+	char continuar;
 	do
     {
-	system("cls");
+		system("cls");
 
-	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\t |   SISTEMA GESTION ALUMNOS  |"<<endl;
-	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\t 1. Ingreso Personas"<<endl;
-	cout<<"\t\t\t 2. Despliegue Personas"<<endl;
-	cout<<"\t\t\t 3. Modifica Personas"<<endl;
-	cout<<"\t\t\t 4. Busca Personas"<<endl;
-	cout<<"\t\t\t 5. Borra Personas"<<endl;
-	cout<<"\t\t\t 6. Exit"<<endl;
+		cout<<"\t\t\t+------------------------------------------------+"<<endl;
+		cout<<"\t\t\t|   BIENVENIDO AL SISTEMA DE GESTION DE ALUMNOS  |"<<endl;
+		cout<<"\t\t\t+------------------------------------------------+"<<endl;
+		cout<<"\t\t\t|1. Agregar Estudiante               |"<<endl;
+		cout<<"\t\t\t|2. Mostrar Estudiante               |"<<endl;
+		cout<<"\t\t\t|3. Modificar Estudiante             |"<<endl;
+		cout<<"\t\t\t|4. Buscar Estudiante                |"<<endl;
+		cout<<"\t\t\t|5. Borrar Estudiante                |"<<endl;
+		cout<<"\t\t\t|6. Salir del programa               |"<<endl;
 
-	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\tOpcion a escoger:[1/2/3/4/5/6]"<<endl;
-	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"Ingresa tu Opcion: ";
-    cin>>choice;
+		cout<<"\t\t\t+------------------------------------+"<<endl;
+		cout<<"\t\t\tIngrese su opcion [1/2/3/4/5/6]:     |"<<endl;
+		cout<<"\t\t\t+------------------------------------+"<<endl;
+		cin>>opcion;
 
-    switch(choice)
-    {
-    case 1:
-    	do
-    	{
-    		insertar();
-    		cout<<"\n\t\t\t Agrega otra persona(Y,N): ";
-    		cin>>x;
-		}while(x=='y'||x=='Y');
-		break;
-	case 2:
-		desplegar();
-		break;
-	case 3:
-		modificar();
-		break;
-	case 4:
-		buscar();
-		break;
-	case 5:
-		borrar();
-		break;
-	case 6:
-		exit(0);
-	default:
-		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
-	}
-	getch();
-    }while(choice!= 6);
+		switch(opcion)
+		{
+			case 1:
+				do
+				{
+					insertar();
+					cout<<"\n\t\t\t ->¿Deseas ingresar a otro estudiante? (S/N): ";
+					cin>>continuar;
+				}while(continuar=='S' || continuar=='s');
+				break;
+			case 2:
+				desplegar();
+				break;
+			case 3:
+				modificar();
+				break;
+			case 4:
+				buscar();
+				break;
+			case 5:
+				borrar();
+				break;
+			case 6:
+				exit(0);
+			default:
+				cout<<"\n\t\t\t Opción no válida. Por favor, inténtelo de nuevo.";
+		}
+		getch();
+    }while(opcion != 6);
 }
 void persona::insertar()
 {
 	system("cls");
-	fstream file;
-	cout<<"\n------------------------------------------------------------------------------------------------------------------------";
-	cout<<"\n-------------------------------------------------Agregar detalles Persona ---------------------------------------------"<<endl;
-
+	fstream archivo;
+	cout<<"\n+----------------------------------------------------------------------------------------------------------------------+";
+	cout<<"\n|------------------------------------------------Agregar detalles del Estudiante --------------------------------------|";
+	cout<<"\n+----------------------------------------------------------------------------------------------------------------------+"<<endl;
 	srand(getpid());
     int year = 24; // Suponiendo que queremos el año 2024
     int numAleatorio = rand() % 10000; // Genera un número aleatorio de 4 dígitos
 
     string id = "9959-" + to_string(year) + "-" + to_string(numAleatorio);
-    cout << "\t\t\tgenerarCarnet: " << id << endl;
+    cout << "\t\t\tGenerando carnet: " << id << endl;
 
-	cout<<"\t\t\tIngresa Nombre Persona     : ";
-	cin>>name;
-	cout<<"\t\t\tIngresa Telefono Persona   : ";
-	cin>>phone;
-	cout<<"\t\t\tIngresa Universidad Persona: ";
-	cin>>college;
-	cout<<"\t\t\tIngresa Direccion Persona  : ";
-	cin>>address;
-	file.open("ParticipantRecord.txt", ios::app | ios::out);
-	file<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< phone <<std::left<<std::setw(15)<< college <<std::left<<std::setw(15)<< address << "\n";
-	file.close();
+	cout<<"\t\t\t->Ingrese el nombre del estudiante: ";
+	cin>>nombre;
+	cout<<"\t\t\t->Ingrese el telefono del estudiante: ";
+	cin>>telefono;
+	cout<<"\t\t\t->Ingrese la universidad del estudiante: ";
+	cin>>universidad;
+	cout<<"\t\t\t->Ingrese la direccion del estudiante: ";
+	cin>>direccion;
+	archivo.open("RegistroPersonas.txt", ios::app | ios::out);
+	archivo<<left<<setw(15)<<id<<left<<setw(15)<<nombre<<left<<setw(15)<<telefono<<left<<setw(15)<<universidad<<left<<setw(15)<<direccion<<"\n";
+	archivo.close();
 }
 void persona::desplegar()
 {
 	system("cls");
-	fstream file;
+	fstream archivo;
 	int total=0;
-	cout<<"\n-------------------------Tabla de Detalles de Personas -------------------------"<<endl;
-	file.open("ParticipantRecord.txt",ios::in);
-	if(!file)
+    cout<<"\n+---------------------------------------------------------------------------------+";
+	cout<<"\n+------------------------Tabla de Detalles del Estudiante ------------------------+";
+    cout<<"\n+---------------------------------------------------------------------------------+"<<endl;
+	archivo.open("RegistroPersonas.txt",ios::in);
+	if(!archivo)
 	{
-		cout<<"\n\t\t\tNo hay informaci�n...";
-		file.close();
+		cout<<"\n\t\t\tNo hay informacion...";
+		archivo.close();
 	}
 	else
 	{
-		file >> id >> name >> phone >> college >> address;
-		while(!file.eof())
+		archivo >> id >> nombre >> telefono >> universidad >> direccion;
+		while(!archivo.eof())
 		{
 			total++;
-			cout<<"\n\n\t\t\t Id Persona: "<<id<<endl;
-			cout<<"\t\t\t Nombre Persona: "<<name<<endl;
-			cout<<"\t\t\t Telefono Persona: "<<phone<<endl;
-			cout<<"\t\t\t Universidad Persona: "<<college<<endl;
-			cout<<"\t\t\t Direccion Persona: "<<address<<endl;
-			file >> id >> name >> phone >> college >> address;
+			cout<<"\n\n\t\t\t ID Persona: "<<id<<endl;
+			cout<<"\t\t\t >Nombre Persona: "<<nombre<<endl;
+			cout<<"\t\t\t >Telefono Persona: "<<telefono<<endl;
+			cout<<"\t\t\t >Universidad Persona: "<<universidad<<endl;
+			cout<<"\t\t\t >Dirección Persona: "<<direccion<<endl;
+			archivo >> id >> nombre >> telefono >> universidad >> direccion;
 		}
 		if(total==0)
 		{
-			cout<<"\n\t\t\tNo hay informacion...";
+			cout<<"\n\t\t\tNo hay información...";
 		}
 	}
-	file.close();
+	archivo.close();
 }
 void persona::modificar()
 {
 	system("cls");
-	fstream file,file1;
-	string participant_id;
-	int found=0;
-	cout<<"\n-------------------------Modificacion Detalles Persona-------------------------"<<endl;
-	file.open("ParticipantRecord.txt",ios::in);
-	if(!file)
+	fstream archivo, archivoTemporal;
+	string idPersona;
+	int encontrado=0;
+	cout<<"\n+------------------------Modificar Detalles de Persona------------------------+"<<endl;
+	archivo.open("RegistroPersonas.txt",ios::in);
+	if(!archivo)
 	{
 		cout<<"\n\t\t\tNo hay informacion..,";
-		file.close();
+		archivo.close();
 	}
 	else
 	{
-		cout<<"\n Ingrese Id de la personas que quiere modificar: ";
-		cin>>participant_id;
-		file1.open("Record.txt",ios::app | ios::out);
-		file >> id >> name >> phone >> college >> address;
-		while(!file.eof())
+		cout<<"\nIngrese el ID de la persona que desea modificar: ";
+		cin>>idPersona;
+		archivoTemporal.open("Temporal.txt",ios::app | ios::out);
+		archivo >> id >> nombre >> telefono >> universidad >> direccion;
+		while(!archivo.eof())
 		{
-			if(participant_id!=id)
+			if(idPersona != id)
 			{
-			 file1<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< phone <<std::left<<std::setw(15)<< college <<std::left<<std::setw(15)<< address << "\n";
+				archivoTemporal<<left<<setw(15)<<id<<left<<setw(15)<<nombre<<left<<setw(15)<<telefono<<left<<setw(15)<<universidad<<left<<setw(15)<<direccion<<"\n";
 			}
 			else
 			{
-				cout<<"\t\t\tIngrese Id Persona: ";
+				cout<<"\t\t\tIngrese el nuevo ID del estudiante: ";
 				cin>>id;
-				cout<<"\t\t\tIngrese Nombre Persona: ";
-				cin>>name;
-				cout<<"\t\t\tIngrese Telefono Persona: ";
-				cin>>phone;
-				cout<<"\t\t\tIngrese Universidad Persona: ";
-				cin>>college;
-				cout<<"\t\t\tIngrese Direccion Persona: ";
-				cin>>address;
-				file1<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< phone <<std::left<<std::setw(15)<< college <<std::left<<std::setw(15)<< address << "\n";
-				found++;
+				cout<<"\t\t\tIngrese el nuevo nombre del estudiante: ";
+				cin>>nombre;
+				cout<<"\t\t\tIngrese el nuevo teléfono del estudiante: ";
+				cin>>telefono;
+				cout<<"\t\t\tIngrese la nueva universidad del estudiante: ";
+				cin>>universidad;
+				cout<<"\t\t\tIngrese la nueva dirección del estudiante: ";
+				cin>>direccion;
+				archivoTemporal<<left<<setw(15)<<id<<left<<setw(15)<<nombre<<left<<setw(15)<<telefono<<left<<setw(15)<<universidad<<left<<setw(15)<<direccion<<"\n";
+				encontrado++;
 			}
-			file >> id >> name >> phone >> college >> address;
+			archivo >> id >> nombre >> telefono >> universidad >> direccion;
 
 		}
-		file1.close();
-		file.close();
-		remove("ParticipantRecord.txt");
-		rename("Record.txt","ParticipantRecord.txt");
+		archivoTemporal.close();
+		archivo.close();
+		remove("RegistroEstudiante.txt");
+		rename("Temporal.txt","RegistroEstudiante.txt");
 	}
 }
 void persona::buscar()
 {
 	system("cls");
-	fstream file;
-	int found=0;
-	file.open("ParticipantRecord.txt",ios::in);
-	if(!file)
+	fstream archivo;
+	int encontrado=0;
+	archivo.open("RegistroEstudiante.txt",ios::in);
+	if(!archivo)
 	{
-		cout<<"\n-------------------------Datos de la Persona buscada------------------------"<<endl;
-		cout<<"\n\t\t\tNo hay informacion...";
+		cout<<"\n+------------------------Detalles del estudiante Buscado----------------------+"<<endl;
+		cout<<"\n\t\t\tNo hay información...";
 	}
 	else
 	{
-		string participant_id;
-		cout<<"\n-------------------------Datos de Persona buscada------------------------"<<endl;
-		cout<<"\nIngrese Id de la Persona que quiere buscar: ";
-		cin>>participant_id;
-		file >> id >> name >> phone >> college >> address;
-		while(!file.eof())
+		string idPersona;
+		cout<<"\n+------------------------Detalles del estudiante Buscada-----------------------+"<<endl;
+		cout<<"\nIngrese el ID de la persona que desea buscar: ";
+		cin>>idPersona;
+		archivo >> id >> nombre >> telefono >> universidad >> direccion;
+		while(!archivo.eof())
 		{
-			if(participant_id==id)
+			if(idPersona==id)
 			{
-				cout<<"\n\n\t\t\t Id Persona: "<<id<<endl;
-				cout<<"\t\t\t Nombre Persona: "<<name<<endl;
-				cout<<"\t\t\t Telefono Persona: "<<phone<<endl;
-				cout<<"\t\t\t Universidad Persona: "<<college<<endl;
-				cout<<"\t\t\t Direccion Persona: "<<address<<endl;
-				found++;
+				cout<<"\n\n\t\t\t ID estudiantes: "<<id<<endl;
+				cout<<"\t\t\t Nombre estudiante: "<<nombre<<endl;
+				cout<<"\t\t\t Teléfono estudiante: "<<telefono<<endl;
+				cout<<"\t\t\t Universidad estudiante: "<<universidad<<endl;
+				cout<<"\t\t\t Dirección estudiante: "<<direccion<<endl;
+				encontrado++;
 			}
-			file >> id >> name >> phone >> college >> address;
+			archivo >> id >> nombre >> telefono >> universidad >> direccion;
 		}
-		if(found==0)
+		if(encontrado==0)
 		{
-			cout<<"\n\t\t\t Persona no encontrada...";
+			cout<<"\n\t\t\t Estudiante no encontrado...";
 		}
-		file.close();
+		archivo.close();
 	}
 }
 void persona::borrar()
 {
 	system("cls");
-	fstream file,file1;
-	string participant_id;
-	int found=0;
-	cout<<"\n-------------------------Detalles Persona a Borrar-------------------------"<<endl;
-	file.open("ParticipantRecord.txt",ios::in);
-	if(!file)
+	fstream archivo, archivoTemporal;
+	string idPersona;
+	int encontrado=0;
+	cout<<"\n+------------------------Detalles de el o la estudiante a Borrar------------------------+"<<endl;
+	archivo.open("RegistroPersonas.txt",ios::in);
+	if(!archivo)
 	{
-		cout<<"\n\t\t\tNo hay informacion...";
-		file.close();
+		cout<<"\n\t\t\tNo hay existe información...";
+		archivo.close();
 	}
 	else
 	{
-		cout<<"\n Ingrese el Id de la Persona que quiere borrar: ";
-		cin>>participant_id;
-		file1.open("Record.txt",ios::app | ios::out);
-		file >> id >> name >> phone >> college >> address;
-		while(!file.eof())
+		cout<<"\nIngrese el ID del estudiante que desea borrar: ";
+		cin>>idPersona;
+		archivoTemporal.open("Temporal.txt",ios::app | ios::out);
+		archivo >> id >> nombre >> telefono >> universidad >> direccion;
+		while(!archivo.eof())
 		{
-			if(participant_id!= id)
+			if(idPersona != id)
 			{
-				file1<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< phone <<std::left<<std::setw(15)<< college <<std::left<<std::setw(15)<< address << "\n";
+				archivoTemporal<<left<<setw(15)<<id<<left<<setw(15)<<nombre<<left<<setw(15)<<telefono<<left<<setw(15)<<universidad<<left<<setw(15)<<direccion<<"\n";
 			}
 			else
 			{
-				found++;
-				cout << "\n\t\t\tBorrado de informacion exitoso";
+				encontrado++;
+				cout << "\n\t\t\t¡La información de la persona ha sido borrada con éxito!";
 			}
-			file >> id >> name >> phone >> college >> address;
+			archivo >> id >> nombre >> telefono >> universidad >> direccion;
 		}
-		if(found==0)
+		if(encontrado==0)
 		{
-			cout<<"\n\t\t\t Id Persona no encontrado...";
+			cout<<"\n\t\t\t ID de estudiante no encontrado...";
 		}
-		file1.close();
-		file.close();
-		remove("ParticipantRecord.txt");
-		rename("Record.txt","ParticipantRecord.txt");
+		archivoTemporal.close();
+		archivo.close();
+		remove("RegistroEstudiante.txt");
+		rename("Temporal.txt","RegistroEstudiante.txt");
 	}
 }
