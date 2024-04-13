@@ -1,21 +1,32 @@
+#include "Maestro.h"
 #include <iostream>
+#include<iostream>
+#include<fstream>
+#include<stdlib.h>
+#include<cstdlib>
+#include<conio.h>
+#include<iomanip>
+
 
 using namespace std;
 
-int main()
+void Maestro::menu()
 {
     // Declaramos las variables necesarias
     int opcion;
+    char x;
     bool juegoActivo = true;
+
+
 
     // Ciclo principal del juego
     while (juegoActivo != false){
         // Mostramos el menú de opciones
         cout << "***********\n";
-        cout << " 1 - Ver registros de estudiantes.\n";
-        cout << " 2 - Agregar nuevo estudiante.\n";
-        cout << " 3 - Actualizar información del estudiante.\n";
-        cout << " 4 - Eliminar registro del estudiante.\n";
+        cout << " 1 - Ver registros de Maestro.\n";
+        cout << " 2 - Agregar nuevo Maestro.\n";
+        cout << " 3 - Actualizar información del Maestro.\n";
+        cout << " 4 - Eliminar registro del Maestro.\n";
         cout << " 5 - Salir.\n";
         cout << " Ingresa tu opción y presiona enter: ";
 
@@ -51,6 +62,5 @@ int main()
         }
 
     }
-    return 0; // Indicamos que el programa finalizó correctamente
-}
 
+}
