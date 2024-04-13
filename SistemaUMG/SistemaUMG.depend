@@ -24,6 +24,14 @@
 	<conio.h>
 	<iomanip>
 
-1712989044 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\include\maestro.h
+1712991223 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\include\maestro.h
 	<iostream>
+
+1712991146 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\main.cpp
+	<iostream>
+	<fstream>
+	"Maestro.h"
+	"Estudiante.h"
+	"Curso.h"
+	"Sedes.h"
 

@@ -6,7 +6,7 @@ using std::string;
 class Maestro
 {
     public:
-        Maestro();
+        //Maestro();
         void menu();
 		void insertar();
 		void desplegar();
