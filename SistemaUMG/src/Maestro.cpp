@@ -33,9 +33,9 @@ void persona::menu()
         system("cls");
 
         cout<<"\t\t\t-------------------------------"<<endl;
-        cout<<"\t\t\t |   MENU PARA MAESTROS       |"<<endl;
+        cout<<"\t\t\t |   MENÚ PARA MAESTROS       |"<<endl;
         cout<<"\t\t\t-------------------------------"<<endl;
-        cout<<"\t\t\t 1. Ver Informacion de Alumnos"<<endl;
+        cout<<"\t\t\t 1. Ver Información de Alumnos"<<endl;
         cout<<"\t\t\t 2. Asignar Tareas"<<endl;
         cout<<"\t\t\t 3. Ver Entrega de Tareas"<<endl;
         cout<<"\t\t\t 4. Calificar Tareas"<<endl;
@@ -78,14 +78,14 @@ void persona::verInformacionAlumnos()
 {
     system("cls");
     cout << "----------------------------------------" << endl;
-    cout << "   CURSO DE CALCULO" << endl;
+    cout << "   CURSO DE CÁLCULO" << endl;
     cout << "----------------------------------------" << endl;
     cout << "Alumno 1: Mishel Loeiza, Carnet 9959-23-3457" << endl;
     cout << "Alumno 2: Rocio López, Carnet 9959-23-6421" << endl;
     cout << "Alumno 3: Ruddy Eduardo, Carnet 9959-23-0101" << endl;
 
     cout << "\n----------------------------------------" << endl;
-    cout << "   CURSO DE PROGRAMACION 1" << endl;
+    cout << "   CURSO DE PROGRAMACIÓN 1" << endl;
     cout << "----------------------------------------" << endl;
     cout << "Alumno 1: Mishel Loeiza, Carnet 9959-23-3457" << endl;
     cout << "Alumno 2: Rocio López, Carnet 9959-23-6421" << endl;
@@ -98,10 +98,10 @@ void persona::asignarTareas()
     cout << "----------------------------------------" << endl;
     cout << "   ASIGNAR TAREAS" << endl;
     cout << "----------------------------------------" << endl;
-    cout << "Ingrese la tarea para el curso de Calculo: ";
+    cout << "Ingrese la tarea para el curso de Cálculo: ";
     cin.ignore(); // Para limpiar el buffer del teclado
     getline(cin, tareaCurso1);
-    cout << "Ingrese la tarea para el curso de Programacion 1: ";
+    cout << "Ingrese la tarea para el curso de Programación 1: ";
     getline(cin, tareaCurso2);
 }
 
@@ -111,8 +111,8 @@ void persona::verEntregaTareas()
     cout << "----------------------------------------" << endl;
     cout << "   VER ENTREGA DE TAREAS" << endl;
     cout << "----------------------------------------" << endl;
-    cout << "Entrega de tarea para el curso de Calculo: " << entregaTareaCurso1 << endl;
-    cout << "Entrega de tarea para el curso de Programacion 1: " << entregaTareaCurso2 << endl;
+    cout << "Entrega de tarea para el curso de Cálculo: " << entregaTareaCurso1 << endl;
+    cout << "Entrega de tarea para el curso de Programación 1: " << entregaTareaCurso2 << endl;
 }
 
 void persona::calificarTareas()
@@ -121,9 +121,9 @@ void persona::calificarTareas()
     cout << "----------------------------------------" << endl;
     cout << "   CALIFICAR TAREAS" << endl;
     cout << "----------------------------------------" << endl;
-    cout << "Ingrese la calificacion para la tarea del curso de Calculo: ";
+    cout << "Ingrese la calificación para la tarea del curso de Cálculo: ";
     cin >> califTareaCurso1;
-    cout << "Ingrese la calificacion para la tarea del curso de Programacion 1: ";
+    cout << "Ingrese la calificación para la tarea del curso de Programación 1: ";
     cin >> califTareaCurso2;
 }
 
@@ -135,13 +135,6 @@ void persona::entregaNotas()
     cout << "----------------------------------------" << endl;
     notaCurso1 = califTareaCurso1; // Supongamos que la nota es igual a la calificación de la tarea
     notaCurso2 = califTareaCurso2; // Supongamos que la nota es igual a la calificación de la tarea
-    cout << "Nota final del curso de Calculo: " << notaCurso1 << endl;
-    cout << "Nota final del curso de Programacion 1: " << notaCurso2 << endl;
-}
-
-int main()
-{
-    persona maestro;
-    maestro.menu();
-    return 0;
+    cout << "Nota final del curso de Cálculo: " << notaCurso1 << endl;
+    cout << "Nota final del curso de Programación 1: " << notaCurso2 << endl;
 }
