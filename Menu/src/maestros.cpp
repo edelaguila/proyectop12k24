@@ -28,7 +28,6 @@ void maestros::menu()
     {
 	system("cls");
 
-<<<<<<< HEAD
         //cout<<"+-----------------------------------------------+"<<endl;
 		//cout<<"|  BIENVENIDO AL SISTEMA DE GESTION DE ALUMNOS  |"<<endl;
 		//cout<<"+-----------------------------------------------+"<<endl;
@@ -58,35 +57,13 @@ void maestros::menu()
     cin>>choice;
 
 
-=======
-	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\t |   SISTEMA GESTION MAESTROS  |"<<endl;
-	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\t 1. Ingreso Personas"<<endl;
-	cout<<"\t\t\t 2. Despliegue Personas"<<endl;
-	cout<<"\t\t\t 3. Modifica Personas"<<endl;
-	cout<<"\t\t\t 4. Busca Personas"<<endl;
-	cout<<"\t\t\t 5. Borra Personas"<<endl;
-	cout<<"\t\t\t 6. Exit"<<endl;
-
-	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"\t\t\tOpcion a escoger:[1/2/3/4/5/6]"<<endl;
-	cout<<"\t\t\t-------------------------------"<<endl;
-	cout<<"Ingresa tu Opcion: ";
-    cin>>choice;
-
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
     switch(choice)
     {
     case 1:
     	do
     	{
     		insertar();
-<<<<<<< HEAD
     		cout<<" Agrega otra persona(Y,N): ";
-=======
-    		cout<<"\n\t\t\t Agrega otra persona(Y,N): ";
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
     		cin>>x;
 		}while(x=='y'||x=='Y');
 		break;
@@ -105,11 +82,7 @@ void maestros::menu()
 	case 6:
 		exit(0);
 	default:
-<<<<<<< HEAD
 		cout<<" ERROR, OPCION INVALIDA, INGRESAR NUEVAMENTE LOS DATOS";
-=======
-		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 	}
 	getch();
     }while(choice!= 6);
@@ -118,21 +91,15 @@ void maestros::insertar()
 {
 	system("cls");
 	fstream file;
-<<<<<<< HEAD
 	cout<<"+---------------------------------------------------------+"<< endl;
 	cout<<"|                Agregar detalles del Maestro             |"<< endl;
 	cout<<"+---------------------------------------------------------+"<< endl;
-=======
-	cout<<"\n------------------------------------------------------------------------------------------------------------------------";
-	cout<<"\n-------------------------------------------------Agregar detalles Persona ---------------------------------------------"<<endl;
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 
 	srand(getpid());
     int year = 24; // Suponiendo que queremos el año 2024
     int numAleatorio = rand() % 10000; // Genera un número aleatorio de 4 dígitos
 
 	string id = "9959-" + to_string(year) + "-" + to_string(numAleatorio);
-<<<<<<< HEAD
     cout<<"       -> Generando carnet del maestro: " << id << endl;
 
 	cout<<"       -> Ingrese el nombre del maestro:  ";
@@ -148,18 +115,6 @@ void maestros::insertar()
 	cin>>address;
     cout<<"+---------------------------------------------------------+"<< endl;
 
-=======
-    cout << "\t\t\tgenerarCarnet: " << id << endl;
-
-	cout<<"\t\t\tIngresa Nombre Persona     : ";
-	cin>>name;
-	cout<<"\t\t\tIngresa Telefono Persona   : ";
-	cin>>phone;
-	cout<<"\t\t\tIngresa Universidad Persona: ";
-	cin>>college;
-	cout<<"\t\t\tIngresa Direccion Persona  : ";
-	cin>>address;
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 	file.open("ParticipantRecord2.txt", ios::app | ios::out);
 	file<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< phone <<std::left<<std::setw(15)<< college <<std::left<<std::setw(15)<< address << "\n";
 	file.close();
@@ -169,7 +124,6 @@ void maestros::desplegar()
 	system("cls");
 	fstream file;
 	int total=0;
-<<<<<<< HEAD
     cout<<"+---------------------------------------------------------------------------------+"<<endl;
 	cout<<"+                             Tabla de Detalles de Personas                       +"<<endl;
     cout<<"+---------------------------------------------------------------------------------+"<<endl;
@@ -178,13 +132,6 @@ void maestros::desplegar()
 	if(!file)
 	{
 		cout<<" No hay informacion ";
-=======
-	cout<<"\n-------------------------Tabla de Detalles de Personas -------------------------"<<endl;
-	file.open("ParticipantRecord2.txt",ios::in);
-	if(!file)
-	{
-		cout<<"\n\t\t\tNo hay informaci�n...";
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 		file.close();
 	}
 	else
@@ -193,29 +140,17 @@ void maestros::desplegar()
 		while(!file.eof())
 		{
 			total++;
-<<<<<<< HEAD
     cout<<"                        Mostrando -> ID del estudiante: "<<id <<endl;
     cout<<"                        Mostrando -> Nombre del estudiante: "  << name << endl;
     cout<<"                        Mostrando -> Telefono: " << phone <<endl;
     cout<<"                        Mostrando -> Universidad : " << college <<endl;
     cout<<"                        Mostrando -> Direccion: " << address <<endl;
     cout<<"+---------------------------------------------------------------------------------+"<<endl;
-=======
-			cout<<"\n\n\t\t\t Id Persona: "<<id<<endl;
-			cout<<"\t\t\t Nombre Persona: "<<name<<endl;
-			cout<<"\t\t\t Telefono Persona: "<<phone<<endl;
-			cout<<"\t\t\t Universidad Persona: "<<college<<endl;
-			cout<<"\t\t\t Direccion Persona: "<<address<<endl;
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 			file >> id >> name >> phone >> college >> address;
 		}
 		if(total==0)
 		{
-<<<<<<< HEAD
 			cout<<" No hay informacion";
-=======
-			cout<<"\n\t\t\tNo hay informacion...";
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 		}
 	}
 	file.close();
@@ -226,7 +161,6 @@ void maestros::modificar()
 	fstream file,file1;
 	string participant_id;
 	int found=0;
-<<<<<<< HEAD
     cout<<"+-------------------------------------------------------------------------------------+"<<endl;
 	cout<<"+                           Modificacion Detalles del maestro                         +"<<endl;
     cout<<"+-------------------------------------------------------------------------------------+"<<endl;
@@ -235,26 +169,14 @@ void maestros::modificar()
 	if(!file)
 	{
 		cout<<"No hay informacion..,";
-=======
-	cout<<"\n-------------------------Modificacion Detalles Persona-------------------------"<<endl;
-	file.open("ParticipantRecord2.txt",ios::in);
-	if(!file)
-	{
-		cout<<"\n\t\t\tNo hay informacion..,";
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 		file.close();
 	}
 	else
 	{
-<<<<<<< HEAD
     cout<<"                 Ingrese Id del maestro que quiere modificar: ";
     cin>>participant_id;
     cout<<"+-------------------------------------------------------------------------------------+"<<endl;
 
-=======
-		cout<<"\n Ingrese Id de la personas que quiere modificar: ";
-		cin>>participant_id;
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 		file1.open("Record.txt",ios::app | ios::out);
 		file >> id >> name >> phone >> college >> address;
 		while(!file.eof())
@@ -265,7 +187,6 @@ void maestros::modificar()
 			}
 			else
 			{
-<<<<<<< HEAD
     cout<<"                    -> Ingrese el nuevo ID del maestro: ";
     cin>>id;
     cout<<"                    -> Ingrese el nuevo nombre del maestro: ";
@@ -277,18 +198,6 @@ void maestros::modificar()
     cout<<"                    -> Ingrese la nueva direccion del maestro: ";
     cin>>address;
     cout<<"+-------------------------------------------------------------------------------------+"<<endl;
-=======
-				cout<<"\t\t\tIngrese Id Persona: ";
-				cin>>id;
-				cout<<"\t\t\tIngrese Nombre Persona: ";
-				cin>>name;
-				cout<<"\t\t\tIngrese Telefono Persona: ";
-				cin>>phone;
-				cout<<"\t\t\tIngrese Universidad Persona: ";
-				cin>>college;
-				cout<<"\t\t\tIngrese Direccion Persona: ";
-				cin>>address;
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 				file1<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< name <<std::left<<std::setw(15)<< phone <<std::left<<std::setw(15)<< college <<std::left<<std::setw(15)<< address << "\n";
 				found++;
 			}
@@ -309,20 +218,14 @@ void maestros::buscar()
 	file.open("ParticipantRecord2.txt",ios::in);
 	if(!file)
 	{
-<<<<<<< HEAD
         cout<<"+-------------------------------------------------------------------------------------+"<<endl;
 		cout<<"+                            Detalles del maestro Buscado                             +"<<endl;
         cout<<"+-------------------------------------------------------------------------------------+"<<endl;
 		cout<<"No hay informacion...";
-=======
-		cout<<"\n-------------------------Datos de la Persona buscada------------------------"<<endl;
-		cout<<"\n\t\t\tNo hay informacion...";
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 	}
 	else
 	{
 		string participant_id;
-<<<<<<< HEAD
 		cout<<"+-------------------------------------------------------------------------------------+"<<endl;
 		cout<<"+                             Detalles del estudiante Buscado                         +"<<endl;
         cout<<"+-------------------------------------------------------------------------------------+"<<endl;
@@ -330,17 +233,11 @@ void maestros::buscar()
 		cin >>participant_id;
         cout<<"+-------------------------------------------------------------------------------------+"<<endl;
 
-=======
-		cout<<"\n-------------------------Datos de Persona buscada------------------------"<<endl;
-		cout<<"\nIngrese Id de la Persona que quiere buscar: ";
-		cin>>participant_id;
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 		file >> id >> name >> phone >> college >> address;
 		while(!file.eof())
 		{
 			if(participant_id==id)
 			{
-<<<<<<< HEAD
         cout<<"                         Mostrando -> Id Maestro: "<<id<<endl;
         cout<<"                         Mostrando -> Nombre Maestro: "<<name<<endl;
         cout<<"                         Mostrando -> Telefono Maestro: "<<phone<<endl;
@@ -348,24 +245,13 @@ void maestros::buscar()
         cout<<"                         Mostrando -> ireccion Maestro: "<<address<<endl;
         cout<<"+-------------------------------------------------------------------------------------+"<<endl;
 
-=======
-				cout<<"\n\n\t\t\t Id Persona: "<<id<<endl;
-				cout<<"\t\t\t Nombre Persona: "<<name<<endl;
-				cout<<"\t\t\t Telefono Persona: "<<phone<<endl;
-				cout<<"\t\t\t Universidad Persona: "<<college<<endl;
-				cout<<"\t\t\t Direccion Persona: "<<address<<endl;
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 				found++;
 			}
 			file >> id >> name >> phone >> college >> address;
 		}
 		if(found==0)
 		{
-<<<<<<< HEAD
 			cout<<"ERROR MAESTRO NO ENCONTRADO...";
-=======
-			cout<<"\n\t\t\t Persona no encontrada...";
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 		}
 		file.close();
 	}
@@ -376,7 +262,6 @@ void maestros::borrar()
 	fstream file,file1;
 	string participant_id;
 	int found=0;
-<<<<<<< HEAD
 
     cout<<"+-------------------------------------------------------------------------------------+"<<endl;
 	cout<<"+                               Detalles Persona a Borrar                             +"<<endl;
@@ -386,26 +271,14 @@ void maestros::borrar()
 	if(!file)
 	{
 		cout<<"NO HAY INFORMACION...";
-=======
-	cout<<"\n-------------------------Detalles Persona a Borrar-------------------------"<<endl;
-	file.open("ParticipantRecord2.txt",ios::in);
-	if(!file)
-	{
-		cout<<"\n\t\t\tNo hay informacion...";
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 		file.close();
 	}
 	else
 	{
-<<<<<<< HEAD
     cout<<"            Ingrese el Id de la Persona que quiere borrar: ";
     cin>>participant_id;
     cout<<"+-------------------------------------------------------------------------------------+"<<endl;
 
-=======
-		cout<<"\n Ingrese el Id de la Persona que quiere borrar: ";
-		cin>>participant_id;
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 		file1.open("Record.txt",ios::app | ios::out);
 		file >> id >> name >> phone >> college >> address;
 		while(!file.eof())
@@ -417,21 +290,13 @@ void maestros::borrar()
 			else
 			{
 				found++;
-<<<<<<< HEAD
 				cout << "Borrado de informacion exitoso";
-=======
-				cout << "\n\t\t\tBorrado de informacion exitoso";
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 			}
 			file >> id >> name >> phone >> college >> address;
 		}
 		if(found==0)
 		{
-<<<<<<< HEAD
 			cout<<" Id de maestro no encontrado...";
-=======
-			cout<<"\n\t\t\t Id Persona no encontrado...";
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 		}
 		file1.close();
 		file.close();

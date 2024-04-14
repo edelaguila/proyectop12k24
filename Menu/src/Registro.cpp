@@ -44,4 +44,3 @@ void Registro::menuR()
         maestro.menu();
     }
  }
-

@@ -34,17 +34,11 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-<<<<<<< HEAD
 		<Unit filename="include/Registro.h" />
 		<Unit filename="include/maestros.h" />
 		<Unit filename="include/persona.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Registro.cpp" />
-=======
-		<Unit filename="include/maestros.h" />
-		<Unit filename="include/persona.h" />
-		<Unit filename="main.cpp" />
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
 		<Unit filename="src/maestros.cpp" />
 		<Unit filename="src/persona.cpp" />
 		<Extensions />

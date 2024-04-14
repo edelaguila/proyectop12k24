@@ -12,7 +12,7 @@ using namespace std;
 class persona
 {
     private:
-    string id,name,phone,college,address;
+    string id,name,phone,college,address,Genero;
     public:
         void menu();
         void insertar();

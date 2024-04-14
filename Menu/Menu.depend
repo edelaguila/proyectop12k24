@@ -77,7 +77,6 @@
 	<iomanip>
 	<string>
 
-<<<<<<< HEAD
 1713040572 source:c:\users\andyg\music\documentos\proyectop12k24-umg_proyecto\menuregistros\menu\main.cpp
 	<iostream>
 	"persona.h"
@@ -117,29 +116,7 @@
 	<iomanip>
 	<string>
 
-1713113160 source:c:\users\josue\onedrive\escritorio\proyectop12k24-umg_proyecto (1)\proyectop12k24-umg_proyecto\menuregistros\menu\main.cpp
-	<iostream>
-	"persona.h"
-	"maestros.h"
-	"Registro.h"
-
-1713030830 c:\users\josue\onedrive\escritorio\proyectop12k24-umg_proyecto (1)\proyectop12k24-umg_proyecto\menuregistros\menu\include\persona.h
-	<iostream>
-	<fstream>
-	<stdlib.h>
-	<cstdlib>
-	<conio.h>
-	<iomanip>
-
-1713030830 c:\users\josue\onedrive\escritorio\proyectop12k24-umg_proyecto (1)\proyectop12k24-umg_proyecto\menuregistros\menu\include\maestros.h
-	<iostream>
-	<fstream>
-	<stdlib.h>
-	<cstdlib>
-	<conio.h>
-	<iomanip>
-
-1713040444 source:c:\users\josue\onedrive\escritorio\proyectop12k24-umg_proyecto (1)\proyectop12k24-umg_proyecto\menuregistros\menu\src\maestros.cpp
+1713040444 source:c:\users\josue\onedrive\escritorio\menuregistros\menu\src\maestros.cpp
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -148,7 +125,7 @@
 	<iomanip>
 	<string>
 
-1713113402 source:c:\users\josue\onedrive\escritorio\proyectop12k24-umg_proyecto (1)\proyectop12k24-umg_proyecto\menuregistros\menu\src\persona.cpp
+1713119970 source:c:\users\josue\onedrive\escritorio\menuregistros\menu\src\persona.cpp
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -157,9 +134,7 @@
 	<iomanip>
 	<string>
 
-1713111620 c:\users\josue\onedrive\escritorio\proyectop12k24-umg_proyecto (1)\proyectop12k24-umg_proyecto\menuregistros\menu\include\registro.h
-
-1713111855 source:c:\users\josue\onedrive\escritorio\proyectop12k24-umg_proyecto (1)\proyectop12k24-umg_proyecto\menuregistros\menu\src\registro.cpp
+1713118325 source:c:\users\josue\onedrive\escritorio\menuregistros\menu\src\registro.cpp
 	"Registro.h"
 	<iostream>
 	<fstream>
@@ -170,5 +145,27 @@
 	<persona.h>
 	<maestros.h>
 
-=======
->>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
+1713118325 c:\users\josue\onedrive\escritorio\menuregistros\menu\include\registro.h
+
+1713119506 c:\users\josue\onedrive\escritorio\menuregistros\menu\include\persona.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713030830 c:\users\josue\onedrive\escritorio\menuregistros\menu\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713118425 source:c:\users\josue\onedrive\escritorio\menuregistros\menu\main.cpp
+	<iostream>
+	"persona.h"
+	"maestros.h"
+	"Registro.h"
+
