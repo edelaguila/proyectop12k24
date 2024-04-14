@@ -34,12 +34,12 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="include/Curso.h" />
+		<Unit filename="include/Cursos.h" />
 		<Unit filename="include/Estudiante.h" />
 		<Unit filename="include/Maestro.h" />
 		<Unit filename="include/Sedes.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="src/Curso.cpp" />
+		<Unit filename="src/Cursos.cpp" />
 		<Unit filename="src/Estudiante.cpp" />
 		<Unit filename="src/Maestro.cpp" />
 		<Unit filename="src/Sedes.cpp" />

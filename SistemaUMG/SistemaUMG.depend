@@ -29,7 +29,7 @@
 	<iomanip>
 	<string>
 
-1713124602 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\src\maestro.cpp
+1713133684 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\src\maestro.cpp
 	"Maestro.h"
 	<iostream>
 	<iostream>
@@ -50,7 +50,7 @@
 	"Cursos.h"
 	"Sedes.h"
 
-1713130182 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\src\cursos.cpp
+1713131203 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\src\cursos.cpp
 	"Cursos.h"
 	<iostream>
 	<fstream>
