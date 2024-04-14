@@ -1,0 +1,23 @@
+# depslib dependency file v1.0
+1713124835 source:c:\users\ruddyard\desktop\menucursos\src\cursos.cpp
+	"Cursos.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713125007 c:\users\ruddyard\desktop\menucursos\include\cursos.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1713125017 source:c:\users\ruddyard\desktop\menucursos\main.cpp
+	<iostream>
+	"Cursos.h"
+
