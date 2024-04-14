@@ -3,9 +3,11 @@
 
 #include "Maestro.h"
 #include "Estudiante.h"
-#include "Curso.h"
+#include "Cursos.h"
 #include "Sedes.h"
 
+/* Hecho por Rocio, main
+*/
 
 using namespace std;
 
@@ -94,7 +96,7 @@ void catalogos(){
 
     switch(choice)
     {
-    case 1:
+    case 1://menus Mishell
         {
             Maestro maestro;
             maestro.menu();
@@ -106,10 +108,10 @@ void catalogos(){
     		cin>>x;
 		}while(x=='y'||x=='Y');*/
 		break;
-	case 2:
+	case 2://Menus Gabriela
 	    {
-            //Estudiante estudiante;
-            //estudiante.menu()
+            Estudiante estudiante;
+            //estudiante.menuE();
 	    }
 
 
@@ -120,14 +122,20 @@ void catalogos(){
 		//}
 		break;
 	case 3:
-	    {
-	        //
+	    {//menu Rudy
+	        Curso curso;
+	        curso.menuCurso();
+
 	    }
 		//modify();
 		break;
 	case 4:
-        //{
-           // aplicaciones aplicacion;
+        {//Menus Meylin
+            Sedes sedes;
+            sedes.menuSede();
+
+        }
+            // aplicaciones aplicacion;
             //aplicacion.menu();
 		//}
 		//search();

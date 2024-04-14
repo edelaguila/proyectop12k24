@@ -27,7 +27,7 @@ class Curso       //Clase Curso
 
     protected:
 
-    private:    //Atributos privados y protegidos
+    private:    //Atributos privados
         string id;
         string nombre;
         string horario;

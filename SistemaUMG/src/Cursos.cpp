@@ -12,6 +12,8 @@ void Curso::menuCurso()  //Creación del constructor menuCurso
 {
     int opcion;
 	char x;
+    bool menuActivo = true;
+
 	do
     {
 	system("cls"); //Limpia pantalla
@@ -51,7 +53,9 @@ void Curso::menuCurso()  //Creación del constructor menuCurso
 		borrarCurso();
 		break;
 	case 6:
-		exit(0);
+	    cout << "Fin del Programa.\n";
+        menuActivo = false;
+		break;
 	default:
 		cout<<"\n\t\t\t Opcion invalida...Por favor prueba otra vez..";
 		}
@@ -59,6 +63,9 @@ void Curso::menuCurso()  //Creación del constructor menuCurso
     }while(opcion!= 6);
 
 }
+
+
+
 
  void Curso::agregarCurso()      //Constructor de la clase Jugador, agregarCurso
 {
