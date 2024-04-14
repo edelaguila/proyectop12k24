@@ -107,6 +107,11 @@ void catalogos(){
 		}while(x=='y'||x=='Y');*/
 		break;
 	case 2:
+	    {
+            //Estudiante estudiante;
+            //estudiante.menu()
+	    }
+
 
 		//display();
 		//{
@@ -115,6 +120,9 @@ void catalogos(){
 		//}
 		break;
 	case 3:
+	    {
+	        //
+	    }
 		//modify();
 		break;
 	case 4:
