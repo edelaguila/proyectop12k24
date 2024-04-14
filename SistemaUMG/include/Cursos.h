@@ -21,7 +21,7 @@ class Curso       //Clase Curso
         void borrarCurso();
         bool loginCurso();
         bool buscarloginCurso(string user, string passw);
-        //string getapodo();
+
 
 
 
