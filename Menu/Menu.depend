@@ -169,3 +169,74 @@
 	"maestros.h"
 	"Registro.h"
 
+1713122806 source:d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\src\maestros.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1713122806 source:d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\src\persona.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1713122806 source:d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\src\registro.cpp
+	"Registro.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<persona.h>
+	<maestros.h>
+
+1713122806 d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\include\registro.h
+
+1713122806 d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\include\persona.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713122806 d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713124081 source:d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\main.cpp
+	<iostream>
+	"persona.h"
+	"maestros.h"
+	"Registro.h"
+	"menunotas.h"
+	"menucursos.h"
+
+1713123178 d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\include\menunotas.h
+
+1713123867 d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\include\menucursos.h
+
+1713124450 source:d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\src\menucursos.cpp
+	"menucursos.h"
+	"Registro.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<persona.h>
+	<maestros.h>
+

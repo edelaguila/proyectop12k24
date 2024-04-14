@@ -36,10 +36,12 @@
 		</Compiler>
 		<Unit filename="include/Registro.h" />
 		<Unit filename="include/maestros.h" />
+		<Unit filename="include/menucursos.h" />
 		<Unit filename="include/persona.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Registro.cpp" />
 		<Unit filename="src/maestros.cpp" />
+		<Unit filename="src/menucursos.cpp" />
 		<Unit filename="src/persona.cpp" />
 		<Extensions />
 	</Project>

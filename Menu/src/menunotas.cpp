@@ -1,15 +1,8 @@
-#include <iostream>
-#include "persona.h"
-#include "maestros.h"
-#include "Registro.h"
 #include "menunotas.h"
-#include "menucursos.h"
 
-using namespace std;
-
-int main()
+void menunotas::notas()
 {
-    system("color 9");
+     system("color 9");
     int opcion;
     char continuar;
     do {
@@ -36,9 +29,8 @@ int main()
                 Registros.menuR();
                 break;
             case 2:
-                system("cls");
-                menucursos cursos;
-                cursos.MenuC();
+                cout << "En este apartado se crear el menu para la asignacion de estudiantes"<< endl;
+                system("pause");
                 break;
             case 3:
                 cout << "En este apartado se crear el menu para la tesoreria"<< endl;
