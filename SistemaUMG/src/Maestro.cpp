@@ -53,7 +53,7 @@ void Maestro::menu()
                 // Aquí iría el código para eliminar el registro de un estudiante
                 break;
             case 5:
-                cout << "Fin del Programa.\n";
+                cout << "Fin del Menu.\n";
                 juegoActivo = false; // Cambiamos el valor de juegoActivo para salir del ciclo
                 break;
             default:
