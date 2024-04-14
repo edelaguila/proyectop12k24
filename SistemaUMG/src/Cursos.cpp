@@ -8,7 +8,7 @@
 
 using namespace std;
 
-void Curso::menuCurso()  //Creación del constructor menuCurso
+void Curso::menuCurso()  //Creaciï¿½n del constructor menuCurso
 {
     int opcion;
 	char x;
@@ -16,7 +16,7 @@ void Curso::menuCurso()  //Creación del constructor menuCurso
     {
 	system("cls"); //Limpia pantalla
 
-    //Menú para el modificación e ingreso de Jugadores
+    //Menï¿½ para el modificaciï¿½n e ingreso de Cursos
 	cout<<"\t\t\t---------------------------------"<<endl;
 	cout<<"\t\t\t |   Menu para crear un Curso  |"<<endl;
 	cout<<"\t\t\t---------------------------------"<<endl;
@@ -60,7 +60,7 @@ void Curso::menuCurso()  //Creación del constructor menuCurso
 
 }
 
- void Curso::agregarCurso()      //Constructor de la clase Jugador, agregarCurso
+ void Curso::agregarCurso()      //Constructor de la clase Curso, agregarCurso
 {
 	system("cls");      //limpia pantalla
 	fstream file;       //creacion variable file de la libreria fstream
@@ -73,7 +73,7 @@ void Curso::menuCurso()  //Creación del constructor menuCurso
 	cin>>nombre;
 	cout<<"\t\t\tIngresa horario curso           : ";
 	cin>>horario;
-	cout<<"\t\t\tIngresa la Contraseña      : ";
+	cout<<"\t\t\tIngresa la Contrasena      : ";
 	cin>>contrasena;
 
 	//Abre archivo y luego lo ve al final de la salida
@@ -82,7 +82,7 @@ void Curso::menuCurso()  //Creación del constructor menuCurso
 	file.close();   //Cierra el archivo
 }
 
- void Curso::mostarCurso()        //Creación del constructor de la clase Jugador, mostarCursoes
+ void Curso::mostarCurso()        //Creaciï¿½n del constructor de la clase Curso, mostarCursoes
 {
 	system("cls");  //limpia pantalla
 	fstream file;   //crea
@@ -91,7 +91,7 @@ void Curso::menuCurso()  //Creación del constructor menuCurso
 	file.open("Curso.txt",ios::in);
 	if(!file)
 	{
-		cout<<"\n\t\t\tNo hay información...";
+		cout<<"\n\t\t\tNo hay informacion...";
 		file.close();
 	}
 	else
@@ -103,7 +103,7 @@ void Curso::menuCurso()  //Creación del constructor menuCurso
 			cout<<"\n\n\t\t\t Id del Curso: "<<id<<endl;
 			cout<<"\t\t\t Nombre del Curso: "<<nombre<<endl;
 			cout<<"\t\t\t horario del Curso: "<<horario<<endl;
-			cout<<"\t\t\t Contraseña del Curso: "<<contrasena<<endl;
+			cout<<"\t\t\t Contrasena del Curso: "<<contrasena<<endl;
 			file >> id >> nombre >> horario >> contrasena;
 		}
 		if(total==0)
@@ -114,7 +114,7 @@ void Curso::menuCurso()  //Creación del constructor menuCurso
 	file.close();
 }
 
- void Curso::modificarCurso()  //Creacion de la clase Jugador, modificarCursoes
+ void Curso::modificarCurso()  //Creacion de la clase Curso, modificarCursoes
 {
 	system("cls");
 	fstream file,file1;
@@ -147,7 +147,7 @@ void Curso::menuCurso()  //Creación del constructor menuCurso
 				cin>>nombre;
 				cout<<"\t\t\tIngrese horario del Curso: ";
 				cin>>horario;
-				cout<<"\t\t\tIngrese la contraseña del Curso: ";
+				cout<<"\t\t\tIngrese la contrasena del Curso: ";
 				cin>>contrasena;
                 file1<<std::left<<std::setw(15)<< id <<std::left<<std::setw(15)<< nombre <<std::left<<std::setw(15)<< horario <<std::left<<std::setw(15)<< contrasena << "\n";
 				found++;
@@ -162,7 +162,7 @@ void Curso::menuCurso()  //Creación del constructor menuCurso
 	}
 }
 
- void Curso::buscarCurso()       //Creacion de la clase Jugador, buscarCursoes
+ void Curso::buscarCurso()       //Creacion de la clase Cursos, buscarCursoes
 {
 	system("cls");
 	fstream file;
@@ -187,7 +187,7 @@ void Curso::menuCurso()  //Creación del constructor menuCurso
 				cout<<"\n\n\t\t\t ID Curso: "<<id<<endl;
 				cout<<"\t\t\t Nombre Curso: "<<nombre<<endl;
 				cout<<"\t\t\t horario Curso: "<<horario<<endl;
-				cout<<"\t\t\t Contraseña Curso: "<<contrasena<<endl;
+				cout<<"\t\t\t Contrasena Curso: "<<contrasena<<endl;
 				found++;
 			}
 			file >> id >> nombre >> horario >> contrasena;
@@ -200,7 +200,7 @@ void Curso::menuCurso()  //Creación del constructor menuCurso
 	}
 }
 
- void Curso::borrarCurso()       //Creacion constructor de la clase Jugador, borrarCurso
+ void Curso::borrarCurso()       //Creacion constructor de la clase curso, borrarCurso
 {
 	system("cls");
 	fstream file,file1;
