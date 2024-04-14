@@ -18,6 +18,7 @@ void Maestro::menu()
     bool juegoActivo = true;
 
 
+system("cls"); //Limpia pantalla
 
     // Ciclo principal del juego
     while (juegoActivo != false){

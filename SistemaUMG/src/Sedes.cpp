@@ -15,6 +15,7 @@ void Sedes::menuSede()
     // Declaramos las variables necesarias
     int opcion;
     bool menuActivo = true;
+	system("cls"); //Limpia pantalla
 
     // Ciclo principal del programa
     while (menuActivo) {
