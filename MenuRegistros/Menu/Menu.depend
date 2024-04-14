@@ -77,6 +77,7 @@
 	<iomanip>
 	<string>
 
+<<<<<<< HEAD
 1713040572 source:c:\users\andyg\music\documentos\proyectop12k24-umg_proyecto\menuregistros\menu\main.cpp
 	<iostream>
 	"persona.h"
@@ -169,3 +170,5 @@
 	<persona.h>
 	<maestros.h>
 
+=======
+>>>>>>> 0128a7b0016435a3e9a22045405af6619b696fe0
