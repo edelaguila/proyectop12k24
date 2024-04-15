@@ -4,23 +4,35 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include<fstream>
+#include<stdlib.h>
+#include<cstdlib>
+#include<conio.h>
+#include<iomanip>
 
-struct Estudiante {
-std::string nombre;
-int edad;
-double promedio;
-};
+using namespace std;
 
-class GestorEstudiantes {
+
+class Estudiante
+{
 private:
 std::vector<Estudiante> estudiantes;
+    string nombre;
+    int edad;
+    int promedio;
 
 public:
-void menu();
-void mostrarEstudiantes();
-void ingresarEstudiante();
-void modificarEstudiante();
-void eliminarEstudiante();
+    void inicio();
+    void menu();
+    void mostrarEstudiantes();
+    void ingresarEstudiante();
+    void modificarEstudiante();
+    void eliminarEstudiante();
 };
+//struct Estudiante {
+//std::string nombre;
+//int edad;
+//double promedio;
+//};
 
 #endif // ESTUDIANTES_H

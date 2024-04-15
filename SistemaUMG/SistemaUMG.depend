@@ -4,14 +4,21 @@
 
 1713124602 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\include\curso.h
 
-1713130956 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\src\estudiante.cpp
+1713147500 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\src\estudiante.cpp
+	<iostream>
+	"estudiante.h"
 
-1713128200 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\include\estudiante.h
+1713148244 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\include\estudiante.h
 	<iostream>
 	<vector>
 	<string>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
 
-1713130918 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\src\sedes.cpp
+1713133908 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\src\sedes.cpp
 	"Sedes.h"
 	<iostream>
 	<fstream>
@@ -42,13 +49,13 @@
 1713124602 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\include\maestro.h
 	<iostream>
 
-1713130793 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\main.cpp
+1713147627 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\main.cpp
 	<iostream>
 	<fstream>
 	"Maestro.h"
-	"Estudiante.h"
 	"Cursos.h"
 	"Sedes.h"
+	"Estudiante.h"
 
 1713131203 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\sistemaumg\src\cursos.cpp
 	"Cursos.h"

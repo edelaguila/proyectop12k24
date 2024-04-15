@@ -2,10 +2,9 @@
 #include<fstream>
 
 #include "Maestro.h"
-#include "Estudiante.h"
 #include "Cursos.h"
 #include "Sedes.h"
-
+#include "Estudiante.h"
 /* Hecho por Rocio, main
 */
 
@@ -111,7 +110,7 @@ void catalogos(){
 	case 2://Menus Gabriela
 	    {
             Estudiante estudiante;
-            //estudiante.menuE();
+            estudiante.inicio();
 	    }
 
 

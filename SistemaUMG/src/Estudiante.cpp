@@ -1,8 +1,8 @@
 #include <iostream>
-#include "estudiante.h"
+#include "Estudiante.h"
 using namespace std;
 
-void menu() {
+void Estudiante::menu() {
     cout << "\n            MENU UMG ALUMNOS"
          << "\n ======================================"
          << "\n 1.- Ingresar Estudiante"
@@ -13,14 +13,14 @@ void menu() {
          << "\n ======================================"
          << "\n Ingrese una opcion: ";
 }
-void mostrarEstudiantes(const vector<Estudiante>& estudiantes) {
+void Estudiante::mostrarEstudiantes() {
     cout << "\n--- LISTA DE ESTUDIANTES ---\n";
     for (const auto& estudiante : estudiantes) {
         cout << "Nombre: " << estudiante.nombre << ", Edad: " << estudiante.edad << ", Promedio: " << estudiante.promedio << endl;
     }
 }
 
-void ingresarEstudiante(vector<Estudiante>& estudiantes) {
+void Estudiante::ingresarEstudiante() {
     Estudiante nuevoEstudiante;
     cout << "Ingrese solo un nombre del estudiante: ";
     cin >> nuevoEstudiante.nombre;
@@ -31,7 +31,7 @@ void ingresarEstudiante(vector<Estudiante>& estudiantes) {
     estudiantes.push_back(nuevoEstudiante);
 }
 
-void modificarEstudiante(vector<Estudiante>& estudiantes) {
+void Estudiante::modificarEstudiante() {
     int indice;
     cout << "Ingrese el indice del estudiante a modificar  (Nombre, Edad, Promedio): ";
     cin >> indice;
@@ -48,7 +48,7 @@ void modificarEstudiante(vector<Estudiante>& estudiantes) {
     }
 }
 
-void eliminarEstudiante(vector<Estudiante>& estudiantes) {
+void Estudiante::eliminarEstudiante() {
     int indice;
     cout << "Ingrese el indice del estudiante a eliminar: ";
     cin >> indice;
@@ -59,7 +59,8 @@ void eliminarEstudiante(vector<Estudiante>& estudiantes) {
     }
 }
 
-int main() {
+void Estudiante::inicio()
+{
     vector<Estudiante> estudiantes;
     int opcion;
 
@@ -69,16 +70,16 @@ int main() {
 
         switch(opcion) {
             case 1:
-                ingresarEstudiante(estudiantes);
+               // ingresarEstudiante(estudiantes);
                 break;
             case 2:
-                modificarEstudiante(estudiantes);
+                //modificarEstudiante(estudiantes);
                 break;
             case 3:
-                eliminarEstudiante(estudiantes);
+                //eliminarEstudiante(estudiantes);
                 break;
             case 4:
-                mostrarEstudiantes(estudiantes);
+                //mostrarEstudiantes(estudiantes);
                 break;
             case 5:
                 cout << "Saliendo del programa..." << endl;
@@ -90,6 +91,6 @@ int main() {
 
     } while (opcion != 5);
 
-    return 0;
+//    return 0;
 }
 
