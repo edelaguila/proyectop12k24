@@ -62,7 +62,7 @@ void Estudiante::eliminarEstudiante() {
 void Estudiante::inicio()
 {
     vector<Estudiante> estudiantes;
-    int opcion;
+    int opcion;//
 
     do {
         menu();
