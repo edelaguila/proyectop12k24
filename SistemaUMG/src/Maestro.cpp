@@ -1,5 +1,5 @@
 //Menu Maestros
-//creado por Mishel Loeiza 9959/23/3457
+//creado por Mishel Loeiza 9959-23-3457
 #include <iostream>
 #include <fstream>
 #include <iomanip>
