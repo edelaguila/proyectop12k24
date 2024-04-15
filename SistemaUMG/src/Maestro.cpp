@@ -3,137 +3,89 @@
 #include <iostream>
 #include <fstream>
 #include <iomanip>
+#include <vector>
 #include <cstdlib>
 #include <conio.h>
-#include <string>
+#include "Maestro.h"
 
 using namespace std;
 
-class Persona {
-private:
-    string ID, nombre, contrasena;
-    string tareaCurso1, tareaCurso2;
-    string entregaTareaCurso1, entregaTareaCurso2;
-    float califTareaCurso1, califTareaCurso2;
-    float notaCurso1, notaCurso2;
-
-public:
-    void menu();
-    void verInformacionAlumnos();
-    void asignarTareas();
-    void verEntregaTareas();
-    void calificarTareas();
-    void entregaNotas();
+struct Alumno {
+    string nombre;
+    string carnet;
 };
 
-void Persona::menu() {
-    int eleccion;
-    do {
-        system("cls");
+struct Tarea {
+    string descripcion;
+    float calificacion;
+};
 
-        cout<< "\t\t\t ------------------------------- " <<endl;
-        cout<< "\t\t\t | MENU PARA MAESTROS | " <<endl;
-        cout<< "\t\t\t ------------------------------- " <<endl;
-        cout<< "\t\t\t 1. Ver Información de Alumnos " <<endl;
-        cout<< "\t\t\t 2. Asignar Tareas " <<endl;
-        cout<< "\t\t\t 3. Ver Entrega de Tareas " <<endl;
-        cout<< "\t\t\t 4. Calificar Tareas " <<endl;
-        cout<< "\t\t\t 5. Entrega de Notas " <<endl;
-        cout<< "\t\t\t 6. Salir " <<endl;
+class Curso {
+private:
+    string nombre;
+    vector<Alumno> alumnos;
+    vector<Tarea> tareas;
 
-        cout<< "\t\t\t ------------------------------- " <<endl;
-        cout<< "\t\t\t Opción a elegir:[1/2/3/4/5/6] " <<endl;
-        cout<< "\t\t\t ------------------------------- " <<endl;
-        cout<< "Ingresa tu Opción: " ;
-        cin>>eleccion;
+public:
+    Curso(string n) : nombre(n) {}
 
-        switch (eleccion) {
-            case 1:
-                verInformacionAlumnos();
-                break;
-            case 2:
-                asignarTareas();
-                break;
-            case 3:
-                verEntregaTareas();
-                break;
-            case 4:
-                calificarTareas();
-                break;
-            case 5:
-                entregaNotas();
-                break;
-            case 6:
-                exit(0);
-            default:
-                cout<< "\n\t\t\t Opción inválida...Por favor prueba otra vez.. " ;
+    void agregarAlumno(Alumno alumno) {
+        alumnos.push_back(alumno);
+    }
+
+    void mostrarAlumnos() {
+        cout << "\nAlumnos del curso " << nombre << ":\n";
+        for (const auto& alumno : alumnos) {
+            cout << "Nombre: " << alumno.nombre << ", Carnet: " << alumno.carnet << endl;
         }
-        getch();
-    } while (eleccion != 6 );
-}
+    }
 
-void Persona::verInformacionAlumnos() {
-    system("cls");
-    cout << " ---------------------------------------- " << endl;
-    cout << "    CURSO DE CÁLCULO " << endl;
-    cout << " ---------------------------------------- " << endl;
-    cout << " Alumno 1: Mishel Loeiza, Carnet 9959-23-3457 " << endl;
-    cout << " Alumno 2: Rocio López, Carnet 9959-23-6421 " << endl;
-    cout << " Alumno 3: Ruddy Eduardo, Carnet 9959-23-0101 " << endl;
+    void asignarTarea(int indiceAlumno) {
+        if (indiceAlumno >= 0 && indiceAlumno < alumnos.size()) {
+            cout << "Ingrese la descripción de la tarea para " << alumnos[indiceAlumno].nombre << ": ";
+            string descripcion;
+            cin.ignore();
+            getline(cin, descripcion);
+            tareas.push_back({descripcion, -1.0}); // Calificación inicializada en -1
+            cout << "Tarea asignada exitosamente." << endl;
+        } else {
+            cout << "Índice de alumno inválido." << endl;
+        }
+    }
 
-    cout << " \n ---------------------------------------- " << endl ;
-    cout << "    CURSO DE PROGRAMACION 1 " << endl;
-    cout << " ---------------------------------------- " << endl;
-    cout << " Alumno 1: Mishel Loeiza, Carnet 9959-23-3457 " << endl;
-    cout << " Alumno 2: Rocio López, Carnet 9959-23-6421 " << endl;
-    cout << " Alumno 3: Ruddy Eduardo, Carnet 9959-23-0101 " << endl;
-}
+    void mostrarTareas() {
+        cout << "\nTareas del curso " << nombre << ":\n";
+        for (size_t i = 0; i < tareas.size(); ++i) {
+            cout << "Tarea " << i + 1 << ": " << tareas[i].descripcion << ", Calificación: " << tareas[i].calificacion << endl;
+        }
+    }
 
-void Persona::asignarTareas() {
-    system("cls");
-    cout << " ---------------------------------------- " << endl;
-    cout << "    ASIGNAR TAREAS " << endl;
-    cout << " ---------------------------------------- " << endl;
-    cout << " Ingrese la tarea para el curso de Cálculo: " ;
-    cin.ignore();
-    getline(cin, tareaCurso1);
-    cout << " Ingrese la tarea para el curso de Programacion 1: " ;
-    getline(cin, tareaCurso2);
-}
-
-void Persona::verEntregaTareas() {
-    system("cls");
-    cout << " ---------------------------------------- " << endl;
-    cout << "    VER ENTREGA DE TAREAS " << endl;
-    cout << " ---------------------------------------- " << endl;
-    cout << " Entrega de tarea para el curso de Calculo: " << entregaTareaCurso1 << endl;
-    cout << " Entrega de tarea para el curso de Programacion 1: " << entregaTareaCurso2 << endl;
-}
-
-void Persona::calificarTareas() {
-    system("cls");
-    cout << " ---------------------------------------- " << endl;
-    cout << "    CALIFICAR TAREAS " << endl;
-    cout << " ---------------------------------------- " << endl;
-    cout << " Ingrese la calificación para la tarea del curso de Cálculo: " ;
-    cin >> califTareaCurso1;
-    cout << " Ingrese la calificación para la tarea del curso de Programación 1: " ;
-    cin >> califTareaCurso2;
-}
-
-void Persona::entregaNotas() {
-    system("cls");
-    cout << " ---------------------------------------- " << endl;
-    cout << "    ENTREGA DE NOTAS " << endl;
-    cout << " ---------------------------------------- " << endl;
-    notaCurso1 = califTareaCurso1;
-    notaCurso2 = califTareaCurso2;
-    cout << " Nota final del curso de Cálculo: " << notaCurso1 << endl;
-    cout << " Nota final del curso de Programación 1: " << notaCurso2 << endl;
-}
+    void calificarTarea(int indiceTarea, float calificacion) {
+        if (indiceTarea >= 0 && indiceTarea < tareas.size()) {
+            tareas[indiceTarea].calificacion = calificacion;
+            cout << "Tarea calificada exitosamente." << endl;
+        } else {
+            cout << "Índice de tarea inválido." << endl;
+        }
+    }
+};
 
 int main() {
-    Persona maestro;
-    maestro.menu();
+    Maestro profesor;
+    // Crear cursos
+    Curso cursoCalculo("Cálculo");
+    Curso cursoProgramacion("Programación");
+
+    // Agregar alumnos a los cursos
+    cursoCalculo.agregarAlumno({"Mishel Loeiza", "9959-23-3457"});
+    cursoCalculo.agregarAlumno({"Rocio López", "9959-23-6421"});
+    cursoCalculo.agregarAlumno({"Ruddy Eduardo", "9959-23-0101"});
+
+    cursoProgramacion.agregarAlumno({"Mishel Loeiza", "9959-23-3457"});
+    cursoProgramacion.agregarAlumno({"Rocio López", "9959-23-6421"});
+    cursoProgramacion.agregarAlumno({"Ruddy Eduardo", "9959-23-0101"});
+
+    // Agregar cursos al profesor
+    profesor.menu();
     return 0;
 }
