@@ -8,7 +8,7 @@
 
 using namespace std;
 
-class maestros
+class alumnos
 {
 	private:
 		string id, nombre, telefono, DPI, direccion, Genero, nacionalidad, civil, fechanaci, anoingre;
@@ -20,23 +20,22 @@ class maestros
 		void buscar();
 		void borrar();
 };
-void maestros::menu()
+void alumnos::menu()
 {
     int opcion;
 	char continuar;
 	do
     {
 		system("cls");
-		system("color E");
-
+        system("color B");
 		cout<<"+-----------------------------------------------+"<<endl;
-		cout<<"|  BIENVENIDO AL SISTEMA DE GESTION DE MAESTROS |"<<endl;
+		cout<<"|  BIENVENIDO AL SISTEMA DE GESTION DE ALUMNOS  |"<<endl;
 		cout<<"+-----------------------------------------------+"<<endl;
-		cout<<"|            1. Agregar Maestro                 |"<<endl;
-		cout<<"|            2. Mostrar Maestro                 |"<<endl;
-		cout<<"|            3. Modificar Maestro               |"<<endl;
-		cout<<"|            4. Buscar Maestro                  |"<<endl;
-		cout<<"|            5. Borrar Maestro                  |"<<endl;
+		cout<<"|            1. Agregar Estudiante              |"<<endl;
+		cout<<"|            2. Mostrar Estudiante              |"<<endl;
+		cout<<"|            3. Modificar Estudiante            |"<<endl;
+		cout<<"|            4. Buscar Estudiante               |"<<endl;
+		cout<<"|            5. Borrar Estudiante               |"<<endl;
 		cout<<"|            6. Salir del programa              |"<<endl;
 		cout<<"|            7. Regresar al menu                |"<<endl;
 		cout<<"+-----------------------------------------------+"<<endl;
@@ -44,17 +43,13 @@ void maestros::menu()
 		cout<<"+-----------------------------------------------+"<<endl;
 		cin>>opcion;
 
-		srand(getpid());
-        int year = 24;
-        int numAleatorio = rand() % 10000;
-
 		switch(opcion)
 		{
 			case 1:
 				do
 				{
 					insertar();
-					cout<<" -> Â¿Deseas ingresar a otro Maestros? (S/N): ";
+					cout<<" -> ¿Deseas ingresar a otro estudiante? (S/N): ";
 					cin>>continuar;
 				}while(continuar=='S' || continuar=='s');
 				break;
@@ -81,64 +76,76 @@ void maestros::menu()
 		getch();
     }while(opcion != 7);
 }
-void maestros::insertar()
+void alumnos::insertar()
 {
-    system("cls");
-    fstream archivo;
-    cout<<"+---------------------------------------------------------+"<< endl;
-    cout<<"|                Agregar detalles del Maestro              |"<< endl;
-    cout<<"+---------------------------------------------------------+"<< endl;
-
-    srand(time(NULL));
+	system("cls");
+	fstream archivo,archivousuario;
+	cout<<"+---------------------------------------------------------+"<< endl;
+	cout<<"|                Agregar detalles del Estudiante          |"<< endl;
+	cout<<"+---------------------------------------------------------+"<< endl;
+	srand(time(NULL));
     int year = 24;
     int numAleatorio = (rand() % 9998) + 1;
 
     id = "9959-" + to_string(year) + "-" + to_string(numAleatorio);
-    cout<<"       -> Generando carnet del maestros: " << id << endl;
+    cout<<"       -> Generando carnet del estudiante: " << id << endl;
 
-    cout<<"       -> Ingrese el nombre del maestros:  ";
-    cin>> nombre;
+	cout<<"       -> Ingrese el nombre del estudiante:  ";
+	cin>> nombre;
 
-    cout<<"       -> Ingrese el Genero del maestros: ";
-    cin>> Genero;
+	cout<<"       -> Ingrese el Genero del estudiante: ";
+	cin>> Genero;
 
-    cout<<"       -> Ingrese la DPI del maestros: ";
-    cin>> DPI;
+	cout<<"       -> Ingrese la DPI del estudiante: ";
+	cin>> DPI;
 
-    cout<<"       -> Ingrese la nacionalidad del maestros: ";
-    cin>> nacionalidad;
+	cout<<"       -> Ingrese la nacionalidad del estudiante: ";
+	cin>> nacionalidad;
 
-    cout<<"       -> Ingrese la direccion del maestros: ";
-    cin>> direccion;
+	cout<<"       -> Ingrese la direccion del estudiante: ";
+	cin>> direccion;
 
-    cout<<"       -> Ingrese el telefono del maestros: ";
-    cin>> telefono;
+    cout<<"       -> Ingrese el telefono del estudiante: ";
+	cin>> telefono;
 
-    cout<<"       -> Ingrese el estado civil del maestros: ";
-    cin >> civil;
+	cout<<"       -> Ingrese el estado civil del estudiante: ";
+	cin >> civil;
 
-    cout<<"       -> Ingrese la fecha de nacimiento del maestros: ";
-    cin >> fechanaci;
+	cout<<"       -> Ingrese la fecha de nacimiento del estudiante: ";
+	cin >> fechanaci;
 
-    cout<<"       -> Ingrese el ano de ingreso del maestros: ";
-    cin >> anoingre;
+	cout<<"       -> Ingrese el ano de ingreso del estudiante: ";
+	cin >> anoingre;
 
     cout<<"+---------------------------------------------------------+"<< endl;
 
-    archivo.open("RegistroMaestros.txt", ios::app | ios::out);
-    archivo<<left<<setw(15)<<id<<left<<setw(15)<<nombre<<left<<setw(15)<<Genero<<left<<setw(15)<<DPI<<left<<setw(15)<< nacionalidad<<left<<setw(15)<<direccion<<left<<setw(15)<<telefono<<left<<setw(15)<<civil<<left<<setw(15)<<fechanaci<<left<<setw(15)<<anoingre<<"\n";
-    archivo.close();
-}
+	archivo.open("RegistroAlumnos.txt", ios::app | ios::out);
+	archivo<<left<<setw(15)<<id<<left<<setw(15)<<nombre<<left<<setw(15)<<Genero<<left<<setw(15)<<DPI<<left<<setw(15)<< nacionalidad<<left<<setw(15)<<direccion<<left<<setw(15)<<telefono<<left<<setw(15)<<civil<<left<<setw(15)<<fechanaci<<left<<setw(15)<<anoingre<<"\n";
+	archivo.close();
 
-void maestros::desplegar()
+	//-------------------------------------------------------------------------------------------------------------------
+        string usuario = nombre;
+
+        string caracteres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890!@#$%^&*";
+        string contrasena;
+        for (int i = 0; i < 8; i++) {
+            contrasena += caracteres[rand() % caracteres.length()];
+        }
+
+        archivousuario.open("UsuariosAlumnos.txt", ios::app | ios::out);
+        archivousuario<<left<<setw(15)<<usuario<<left<<setw(15)<<contrasena<<"\n";
+        archivousuario.close();
+    //-------------------------------------------------------------------------------------------------------------------
+}
+void alumnos::desplegar()
 {
 	system("cls");
 	fstream archivo;
 	int total=0;
     cout<<"+---------------------------------------------------------------------------------+"<<endl;
-	cout<<"+                            Tabla de Detalles del Maestro                        +"<<endl;
+	cout<<"+                            Tabla de Detalles del Estudiante                     +"<<endl;
     cout<<"+---------------------------------------------------------------------------------+"<<endl;
-	archivo.open("RegistroMaestros.txt",ios::in);
+	archivo.open("RegistroAlumnos.txt",ios::in);
 	if(!archivo)
 	{
 		cout<<"Error, no se encuentra informacion...";
@@ -150,8 +157,8 @@ void maestros::desplegar()
 		while(!archivo.eof())
 		{
 			total++;
-    cout<<"                        Mostrando -> ID del Maestro: "<<id <<endl;
-    cout<<"                        Mostrando -> Nombre del Maestro: "  << nombre << endl;
+    cout<<"                        Mostrando -> ID del estudiante: "<<id <<endl;
+    cout<<"                        Mostrando -> Nombre del estudiante: "  << nombre << endl;
     cout<<"                        Mostrando -> Genero: " << Genero <<endl;
     cout<<"                        Mostrando -> DPI : " << DPI <<endl;
     cout<<"                        Mostrando -> Direccion: " << direccion <<endl;
@@ -172,17 +179,17 @@ void maestros::desplegar()
 	}
 	archivo.close();
 }
-void maestros::modificar()
+void alumnos::modificar()
 {
 	system("cls");
 	fstream archivo, archivoTemporal;
 	string idPersona;
 	int encontrado=0;
     cout<<"+---------------------------------------------------------------------------------+"<<endl;
-	cout<<"+                       Modificar Detalles del Maestro                         +"<<endl;
+	cout<<"+                       Modificar Detalles del estudiante                         +"<<endl;
     cout<<"+---------------------------------------------------------------------------------+"<<endl;
 
-	archivo.open("RegistroMaestros.txt",ios::in);
+	archivo.open("RegistroAlumnos.txt",ios::in);
 	if(!archivo)
 	{
 		cout<<"Error, no se encuentra informacion...";
@@ -203,25 +210,25 @@ void maestros::modificar()
 			}
 			else
 			{
-				cout<<" -> Ingrese el nuevo ID del Maestro: ";
+				cout<<" -> Ingrese el nuevo ID del estudiante: ";
 				cin>>id;
-				cout<<" -> Ingrese el nuevo nombre del Maestro: ";
+				cout<<" -> Ingrese el nuevo nombre del estudiante: ";
 				cin>>nombre;
-				cout<<" -> Ingrese el nuevo Genero del Maestro: ";
+				cout<<" -> Ingrese el nuevo Genero del estudiante: ";
 				cin>>Genero;
-				cout<<" -> Ingrese la nueva DPI del Maestro: ";
+				cout<<" -> Ingrese la nueva DPI del estudiante: ";
 				cin>>DPI;
-				cout<<" -> Ingrese la nueva nacionalidad del Maestro: ";
+				cout<<" -> Ingrese la nueva nacionalidad del estudiante: ";
                 cin >>nacionalidad;
-				cout<<" -> Ingrese la nueva direccion del Maestro: ";
+				cout<<" -> Ingrese la nueva direccion del estudiante: ";
 				cin>>direccion;
 				cout<<" -> Ingrese el nuevo Telefono del estuantes: ";
 				cin>>telefono;
-				cout<<" -> Ingrese el nuevo estado civil del Maestro: ";
+				cout<<" -> Ingrese el nuevo estado civil del estudiante: ";
                 cin >> civil;
-                cout<<" -> Ingrese la nueva fecha de nacimiento del Maestro: ";
+                cout<<" -> Ingrese la nueva fecha de nacimiento del estudiante: ";
                 cin >> fechanaci;
-                cout<<" -> Ingrese el nuevo ano de ingreso del Maestro: ";
+                cout<<" -> Ingrese el nuevo ano de ingreso del estudiante: ";
                 cin >> anoingre;
     cout<<"+---------------------------------------------------------------------------------+"<<endl;
 
@@ -233,32 +240,32 @@ void maestros::modificar()
 		}
 		archivoTemporal.close();
 		archivo.close();
-		remove("RegistroMaestros.txt");
-		rename("Temporal.txt","RegistroMaestros.txt");
+		remove("RegistroAlumnos.txt");
+		rename("Temporal.txt","RegistroAlumnos.txt");
 	}
 }
-void maestros::buscar()
+void alumnos::buscar()
 {
 	system("cls");
 	fstream archivo;
 	int encontrado=0;
-	archivo.open("RegistroMaestros.txt",ios::in);
+	archivo.open("RegistroAlumnos.txt",ios::in);
 	if(!archivo)
 	{
         cout<<"+-----------------------------------------------------------------------------+"<<endl;
-		cout<<"+                        Detalles del Maestro Buscado                      +"<<endl;
+		cout<<"+                        Detalles del estudiante Buscado                      +"<<endl;
         cout<<"+-----------------------------------------------------------------------------+"<<endl;
 
-		cout<<"No hay informaciÃ³n...";
+		cout<<"No hay información...";
 	}
 	else
 	{
 		string idPersona;
         cout<<"+-----------------------------------------------------------------------------+"<<endl;
-		cout<<"+                        Detalles del Maestro Buscada                      +"<<endl;
+		cout<<"+                        Detalles del estudiante Buscada                      +"<<endl;
         cout<<"+-----------------------------------------------------------------------------+"<<endl;
 
-		cout<<"                Ingrese el ID del Maestro que desea buscar: ";
+		cout<<"                Ingrese el ID del estudiante que desea buscar: ";
 		cin>>idPersona;
         cout<<"+-----------------------------------------------------------------------------+"<<endl;
 		archivo >> id >> nombre >> Genero >> DPI >> nacionalidad >> direccion >> telefono >> civil >> fechanaci >> anoingre;
@@ -266,8 +273,8 @@ void maestros::buscar()
 		{
 			if(idPersona==id)
 			{
-        cout<<"                        Mostrando -> ID del Maestro: "<<id <<endl;
-    cout<<"                        Mostrando -> Nombre del Maestro: "  << nombre << endl;
+        cout<<"                        Mostrando -> ID del estudiante: "<<id <<endl;
+    cout<<"                        Mostrando -> Nombre del estudiante: "  << nombre << endl;
     cout<<"                        Mostrando -> Genero: " << Genero <<endl;
     cout<<"                        Mostrando -> DPI : " << DPI <<endl;
     cout<<"                        Mostrando -> Direccion: " << direccion <<endl;
@@ -289,17 +296,17 @@ void maestros::buscar()
 		archivo.close();
 	}
 }
-void maestros::borrar()
+void alumnos::borrar()
 {
 	system("cls");
 	fstream archivo, archivoTemporal;
 	string idPersona;
 	int encontrado=0;
     cout<<"+---------------------------------------------------------------------------------+"<<endl;
-	cout<<"+                             Eliminar Maestro                                    +"<<endl;
+	cout<<"+                             Eliminar estudiante                                 +"<<endl;
     cout<<"+---------------------------------------------------------------------------------+"<<endl;
 
-	archivo.open("RegistroMaestros.txt",ios::in);
+	archivo.open("RegistroAlumnos.txt",ios::in);
 	if(!archivo)
 	{
 		cout<<"Error, no se encuentra informacion...";
@@ -320,7 +327,7 @@ void maestros::borrar()
 			}
 			else
 			{
-			    cout << "El Maestro llamado: " << nombre << "a sido eliminado con exito.";
+			    cout << "El alumno llamado: " << nombre << "a sido eliminado con exito.";
                 encontrado++;
 			}
 		archivo >> id >> nombre >> Genero >> DPI >> nacionalidad >> direccion >> telefono >> civil >> fechanaci >> anoingre;
@@ -328,7 +335,8 @@ void maestros::borrar()
 		}
 		archivoTemporal.close();
 		archivo.close();
-		remove("RegistroMaestros.txt");
-		rename("Temporal.txt","RegistroMaestros.txt");
+		remove("RegistroAlumnos.txt");
+		rename("Temporal.txt","RegistroAlumnos.txt");
 	}
 }
+
