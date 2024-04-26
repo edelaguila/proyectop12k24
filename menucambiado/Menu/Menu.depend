@@ -431,13 +431,13 @@
 	<iomanip>
 	<string>
 
-1714143746 source:d:\umg\programacion1\proyecto grupal\menucambiado\menu\main.cpp
+1714160994 source:c:\users\andyg\music\documentos\menucambiado\menu\main.cpp
 	<iostream>
 	"alumnos.h"
 	"maestros.h"
 	"Registro.h"
 
-1714143746 d:\umg\programacion1\proyecto grupal\menucambiado\menu\include\alumnos.h
+1714143746 c:\users\andyg\music\documentos\menucambiado\menu\include\alumnos.h
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -445,7 +445,7 @@
 	<conio.h>
 	<iomanip>
 
-1714114070 d:\umg\programacion1\proyecto grupal\menucambiado\menu\include\maestros.h
+1714114070 c:\users\andyg\music\documentos\menucambiado\menu\include\maestros.h
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -453,18 +453,9 @@
 	<conio.h>
 	<iomanip>
 
-1713124730 d:\umg\programacion1\proyecto grupal\menucambiado\menu\include\registro.h
+1713124730 c:\users\andyg\music\documentos\menucambiado\menu\include\registro.h
 
-1714143955 source:d:\umg\programacion1\proyecto grupal\menucambiado\menu\src\alumnos.cpp
-	<iostream>
-	<fstream>
-	<stdlib.h>
-	<cstdlib>
-	<conio.h>
-	<iomanip>
-	<string>
-
-1714143469 source:d:\umg\programacion1\proyecto grupal\menucambiado\menu\src\maestros.cpp
+1714160993 source:c:\users\andyg\music\documentos\menucambiado\menu\src\alumnos.cpp
 	<iostream>
 	<fstream>
 	<stdlib.h>
@@ -473,7 +464,7 @@
 	<iomanip>
 	<string>
 
-1714143758 source:d:\umg\programacion1\proyecto grupal\menucambiado\menu\src\registro.cpp
+1714160867 source:c:\users\andyg\music\documentos\menucambiado\menu\src\registro.cpp
 	"Registro.h"
 	<iostream>
 	<fstream>
@@ -483,4 +474,13 @@
 	<iomanip>
 	<alumnos.h>
 	<maestros.h>
+
+1714160896 source:c:\users\andyg\music\documentos\menucambiado\menu\src\maestros.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
 

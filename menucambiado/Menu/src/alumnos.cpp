@@ -27,7 +27,7 @@ void alumnos::menu()
 	do
     {
 		system("cls");
-
+        system("color B");
 		cout<<"+-----------------------------------------------+"<<endl;
 		cout<<"|  BIENVENIDO AL SISTEMA DE GESTION DE ALUMNOS  |"<<endl;
 		cout<<"+-----------------------------------------------+"<<endl;

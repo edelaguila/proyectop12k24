@@ -17,7 +17,7 @@ void Registro::menuR()
 {
 
 
-     system("color 9");
+     system("color A");
     int elec;
 
     cout<<"+-----------------------------------------------------------+"<< endl;
