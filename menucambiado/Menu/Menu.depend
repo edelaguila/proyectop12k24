@@ -1,0 +1,486 @@
+# depslib dependency file v1.0
+1712955932 source:c:\users\oskar\onedrive\escritorio\tercer semestre\menu\main.cpp
+	<iostream>
+	"persona.h"
+	"maestros.h"
+
+1712953579 c:\users\oskar\onedrive\escritorio\tercer semestre\menu\include\persona.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1712957498 source:c:\users\oskar\onedrive\escritorio\tercer semestre\menu\src\persona.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1712957498 source:c:\users\oskar\onedrive\escritorio\tercer semestre\menu\src\maestros.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1712954899 c:\users\oskar\onedrive\escritorio\tercer semestre\menu\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1712986168 source:d:\menuregistros\menu\main.cpp
+	<iostream>
+	"persona.h"
+	"maestros.h"
+
+1712983129 d:\menuregistros\menu\include\persona.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1712983129 d:\menuregistros\menu\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1712983129 source:d:\menuregistros\menu\src\maestros.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1712986434 source:d:\menuregistros\menu\src\persona.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1713040572 source:c:\users\andyg\music\documentos\proyectop12k24-umg_proyecto\menuregistros\menu\main.cpp
+	<iostream>
+	"persona.h"
+	"maestros.h"
+
+1713030829 c:\users\andyg\music\documentos\proyectop12k24-umg_proyecto\menuregistros\menu\include\persona.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713030829 c:\users\andyg\music\documentos\proyectop12k24-umg_proyecto\menuregistros\menu\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713040443 source:c:\users\andyg\music\documentos\proyectop12k24-umg_proyecto\menuregistros\menu\src\maestros.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1713056799 source:c:\users\andyg\music\documentos\proyectop12k24-umg_proyecto\menuregistros\menu\src\persona.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1713040444 source:c:\users\josue\onedrive\escritorio\menuregistros\menu\src\maestros.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1713119970 source:c:\users\josue\onedrive\escritorio\menuregistros\menu\src\persona.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1713118325 source:c:\users\josue\onedrive\escritorio\menuregistros\menu\src\registro.cpp
+	"Registro.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<persona.h>
+	<maestros.h>
+
+1713118325 c:\users\josue\onedrive\escritorio\menuregistros\menu\include\registro.h
+
+1713119506 c:\users\josue\onedrive\escritorio\menuregistros\menu\include\persona.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713030830 c:\users\josue\onedrive\escritorio\menuregistros\menu\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713118425 source:c:\users\josue\onedrive\escritorio\menuregistros\menu\main.cpp
+	<iostream>
+	"persona.h"
+	"maestros.h"
+	"Registro.h"
+
+1713122806 source:d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\src\maestros.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1713122806 source:d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\src\persona.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1713122806 source:d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\src\registro.cpp
+	"Registro.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<persona.h>
+	<maestros.h>
+
+1713122806 d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\include\registro.h
+
+1713122806 d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\include\persona.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713122806 d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713124081 source:d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\main.cpp
+	<iostream>
+	"persona.h"
+	"maestros.h"
+	"Registro.h"
+	"menunotas.h"
+	"menucursos.h"
+
+1713123178 d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\include\menunotas.h
+
+1713123867 d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\include\menucursos.h
+
+1713124450 source:d:\umg\programacion1\proyecto grupal\proyectop12k24\menu\src\menucursos.cpp
+	"menucursos.h"
+	"Registro.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<persona.h>
+	<maestros.h>
+
+1714079280 source:c:\users\oskar\onedrive\escritorio\proyectop12k24-umg_proyecto (1)\proyectop12k24-umg_proyecto\menu\main.cpp
+	<iostream>
+	"persona.h"
+	"maestros.h"
+	"Registro.h"
+	"menucursos.h"
+
+1713124730 c:\users\oskar\onedrive\escritorio\proyectop12k24-umg_proyecto (1)\proyectop12k24-umg_proyecto\menu\include\persona.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713124730 c:\users\oskar\onedrive\escritorio\proyectop12k24-umg_proyecto (1)\proyectop12k24-umg_proyecto\menu\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713124730 c:\users\oskar\onedrive\escritorio\proyectop12k24-umg_proyecto (1)\proyectop12k24-umg_proyecto\menu\include\registro.h
+
+1713124730 c:\users\oskar\onedrive\escritorio\proyectop12k24-umg_proyecto (1)\proyectop12k24-umg_proyecto\menu\include\menucursos.h
+
+1713124730 source:c:\users\oskar\onedrive\escritorio\proyectop12k24-umg_proyecto (1)\proyectop12k24-umg_proyecto\menu\src\maestros.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1713124730 source:c:\users\oskar\onedrive\escritorio\proyectop12k24-umg_proyecto (1)\proyectop12k24-umg_proyecto\menu\src\menucursos.cpp
+	"menucursos.h"
+	"Registro.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<persona.h>
+	<maestros.h>
+
+1713124730 source:c:\users\oskar\onedrive\escritorio\proyectop12k24-umg_proyecto (1)\proyectop12k24-umg_proyecto\menu\src\persona.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1713124730 source:c:\users\oskar\onedrive\escritorio\proyectop12k24-umg_proyecto (1)\proyectop12k24-umg_proyecto\menu\src\registro.cpp
+	"Registro.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<persona.h>
+	<maestros.h>
+
+1714079480 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\3er. semestre programas de codeblocks\proyectop12k24-umg_proyecto\menu\main.cpp
+	<iostream>
+	"persona.h"
+	"maestros.h"
+	"Registro.h"
+
+1714083759 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\3er. semestre programas de codeblocks\proyectop12k24-umg_proyecto\menu\include\persona.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713124730 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\3er. semestre programas de codeblocks\proyectop12k24-umg_proyecto\menu\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713124730 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\3er. semestre programas de codeblocks\proyectop12k24-umg_proyecto\menu\include\registro.h
+
+1714080466 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\3er. semestre programas de codeblocks\proyectop12k24-umg_proyecto\menu\src\maestros.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1714087413 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\3er. semestre programas de codeblocks\proyectop12k24-umg_proyecto\menu\src\persona.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1713124730 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\3er. semestre programas de codeblocks\proyectop12k24-umg_proyecto\menu\src\registro.cpp
+	"Registro.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<persona.h>
+	<maestros.h>
+
+1714143746 source:c:\users\josue\onedrive\escritorio\menugoty\menu\main.cpp
+	<iostream>
+	"alumnos.h"
+	"maestros.h"
+	"Registro.h"
+
+1714083760 c:\users\josue\onedrive\escritorio\menugoty\menu\include\persona.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1714114070 c:\users\josue\onedrive\escritorio\menugoty\menu\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713124730 c:\users\josue\onedrive\escritorio\menugoty\menu\include\registro.h
+
+1714143469 source:c:\users\josue\onedrive\escritorio\menugoty\menu\src\maestros.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1714143758 source:c:\users\josue\onedrive\escritorio\menugoty\menu\src\registro.cpp
+	"Registro.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<alumnos.h>
+	<maestros.h>
+
+1714143469 source:c:\users\josue\onedrive\escritorio\menugoty\menu\src\persona.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1714143746 c:\users\josue\onedrive\escritorio\menugoty\menu\include\alumnos.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1714143955 source:c:\users\josue\onedrive\escritorio\menugoty\menu\src\alumnos.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1714143746 source:d:\umg\programacion1\proyecto grupal\menucambiado\menu\main.cpp
+	<iostream>
+	"alumnos.h"
+	"maestros.h"
+	"Registro.h"
+
+1714143746 d:\umg\programacion1\proyecto grupal\menucambiado\menu\include\alumnos.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1714114070 d:\umg\programacion1\proyecto grupal\menucambiado\menu\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1713124730 d:\umg\programacion1\proyecto grupal\menucambiado\menu\include\registro.h
+
+1714143955 source:d:\umg\programacion1\proyecto grupal\menucambiado\menu\src\alumnos.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1714143469 source:d:\umg\programacion1\proyecto grupal\menucambiado\menu\src\maestros.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1714143758 source:d:\umg\programacion1\proyecto grupal\menucambiado\menu\src\registro.cpp
+	"Registro.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<alumnos.h>
+	<maestros.h>
+

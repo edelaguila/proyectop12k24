@@ -11,7 +11,7 @@ using namespace std;
 class persona
 {
 	private:
-		string id, nombre, telefono, DPI, direccion, Genero;
+		string id, nombre, telefono, DPI, direccion, Genero, nacionalidad, civil, fechanaci, anoingre;
 	public:
 		void menu();
 		void insertar();
@@ -37,8 +37,9 @@ void persona::menu()
 		cout<<"|            4. Buscar Estudiante               |"<<endl;
 		cout<<"|            5. Borrar Estudiante               |"<<endl;
 		cout<<"|            6. Salir del programa              |"<<endl;
+		cout<<"|            7. Regresar al menu                |"<<endl;
 		cout<<"+-----------------------------------------------+"<<endl;
-		cout<<"|         Ingrese su opcion [1/2/3/4/5/6]       |"<<endl;
+		cout<<"|        Ingrese su opcion [1/2/3/4/5/6/7]      |"<<endl;
 		cout<<"+-----------------------------------------------+"<<endl;
 		cin>>opcion;
 
@@ -66,11 +67,14 @@ void persona::menu()
 				break;
 			case 6:
 				exit(0);
+				break;
+            case 7:
+				break;
 			default:
 				cout<<"ERROR, OPCION NO VALIDA, INTENTELO DE NUEVO PORFAVOR";
 		}
 		getch();
-    }while(opcion != 6);
+    }while(opcion != 7);
 }
 void persona::insertar()
 {
@@ -79,11 +83,11 @@ void persona::insertar()
 	cout<<"+---------------------------------------------------------+"<< endl;
 	cout<<"|                Agregar detalles del Estudiante          |"<< endl;
 	cout<<"+---------------------------------------------------------+"<< endl;
-	srand(getpid());
-    int year = 24; // Suponiendo que queremos el año 2024
-    int numAleatorio = rand() % 10000; // Genera un número aleatorio de 4 dígitos
+	srand(time(NULL));
+    int year = 24;
+    int numAleatorio = (rand() % 9998) + 1;
 
-    string id = "9959-" + to_string(year) + "-" + to_string(numAleatorio);
+    id = "9959-" + to_string(year) + "-" + to_string(numAleatorio);
     cout<<"       -> Generando carnet del estudiante: " << id << endl;
 
 	cout<<"       -> Ingrese el nombre del estudiante:  ";
@@ -95,17 +99,28 @@ void persona::insertar()
 	cout<<"       -> Ingrese la DPI del estudiante: ";
 	cin>> DPI;
 
+	cout<<"       -> Ingrese la nacionalidad del estudiante: ";
+	cin>> nacionalidad;
+
 	cout<<"       -> Ingrese la direccion del estudiante: ";
 	cin>> direccion;
 
     cout<<"       -> Ingrese el telefono del estudiante: ";
 	cin>> telefono;
 
+	cout<<"       -> Ingrese el estado civil del estudiante: ";
+	cin >> civil;
+
+	cout<<"       -> Ingrese la fecha de nacimiento del estudiante: ";
+	cin >> fechanaci;
+
+	cout<<"       -> Ingrese el ano de ingreso del estudiante: ";
+	cin >> anoingre;
 
     cout<<"+---------------------------------------------------------+"<< endl;
 
 	archivo.open("RegistroPersonas.txt", ios::app | ios::out);
-	archivo<<left<<setw(15)<<id<<left<<setw(15)<<nombre<<left<<setw(15)<<Genero<<left<<setw(15)<<DPI<<left<<setw(15)<<direccion<<left<<setw(15)<<telefono<<"\n";
+	archivo<<left<<setw(15)<<id<<left<<setw(15)<<nombre<<left<<setw(15)<<Genero<<left<<setw(15)<<DPI<<left<<setw(15)<< nacionalidad<<left<<setw(15)<<direccion<<left<<setw(15)<<telefono<<left<<setw(15)<<civil<<left<<setw(15)<<fechanaci<<left<<setw(15)<<anoingre<<"\n";
 	archivo.close();
 }
 void persona::desplegar()
@@ -124,7 +139,7 @@ void persona::desplegar()
 	}
 	else
 	{
-		archivo >> id >> nombre >> Genero >> DPI >> direccion >> telefono;
+		archivo >> id >> nombre >> Genero >> DPI >> nacionalidad >> direccion >> telefono >> civil >> fechanaci >> anoingre;
 		while(!archivo.eof())
 		{
 			total++;
@@ -133,14 +148,19 @@ void persona::desplegar()
     cout<<"                        Mostrando -> Genero: " << Genero <<endl;
     cout<<"                        Mostrando -> DPI : " << DPI <<endl;
     cout<<"                        Mostrando -> Direccion: " << direccion <<endl;
+    cout<<"                        Mostrando -> Nacionalidad: " << nacionalidad << endl;
     cout<<"                        Mostrando -> Telefono:  " << telefono << endl;
+    cout<<"                        Mostrando -> Estado Civil:  " << civil << endl;
+    cout<<"                        Mostrando -> Fecha de nacimiento:  " << fechanaci << endl;
+    cout<<"                        Mostrando -> Ano de ingreso:  " << anoingre << endl;
     cout<<"+---------------------------------------------------------------------------------+"<<endl;
 
-			archivo >> id >> nombre >> Genero >> DPI >> direccion >> telefono;
+			archivo >> id >> nombre >> Genero >> DPI >> nacionalidad >> direccion >> telefono >> civil >> fechanaci >> anoingre;
 		}
 		if(total==0)
 		{
 			cout<<"Error, no se encuentra informacion...";
+			archivo.close();
 		}
 	}
 	archivo.close();
@@ -167,12 +187,12 @@ void persona::modificar()
 		cin>>idPersona;
     cout<<"+---------------------------------------------------------------------------------+"<<endl;
 		archivoTemporal.open("Temporal.txt",ios::app | ios::out);
-		archivo >> id >> nombre >> Genero >> DPI >> direccion >> telefono;
+		archivo >> id >> nombre >> Genero >> DPI >> nacionalidad >> direccion >> telefono >> civil >> fechanaci >> anoingre;
 		while(!archivo.eof())
 		{
 			if(idPersona != id)
 			{
-				archivoTemporal<<left<<setw(15)<<id<<left<<setw(15)<<nombre<<left<<setw(15)<<Genero<<left<<setw(15)<<DPI<<left<<setw(15)<<direccion<<left<<setw(15)<<telefono<<"\n";
+				archivoTemporal<<left<<setw(15)<<id<<left<<setw(15)<<nombre<<left<<setw(15)<<Genero<<left<<setw(15)<<DPI<<left<<setw(15)<< nacionalidad<<left<<setw(15)<<direccion<<left<<setw(15)<<telefono<<left<<setw(15)<<civil<<left<<setw(15)<<fechanaci<<left<<setw(15)<<anoingre<<"\n";
 			}
 			else
 			{
@@ -184,22 +204,30 @@ void persona::modificar()
 				cin>>Genero;
 				cout<<" -> Ingrese la nueva DPI del estudiante: ";
 				cin>>DPI;
+				cout<<" -> Ingrese la nueva nacionalidad del estudiante: ";
+                cin >>nacionalidad;
 				cout<<" -> Ingrese la nueva direccion del estudiante: ";
 				cin>>direccion;
 				cout<<" -> Ingrese el nuevo Telefono del estuantes: ";
 				cin>>telefono;
+				cout<<" -> Ingrese el nuevo estado civil del estudiante: ";
+                cin >> civil;
+                cout<<" -> Ingrese la nueva fecha de nacimiento del estudiante: ";
+                cin >> fechanaci;
+                cout<<" -> Ingrese el nuevo ano de ingreso del estudiante: ";
+                cin >> anoingre;
     cout<<"+---------------------------------------------------------------------------------+"<<endl;
 
-				archivoTemporal<<left<<setw(15)<<id<<left<<setw(15)<<nombre<<left<<setw(15)<<Genero<<left<<setw(15)<<DPI<<left<<setw(15)<<direccion<<left<<setw(15)<<telefono<<"\n";
+				archivoTemporal<<left<<setw(15)<<id<<left<<setw(15)<<nombre<<left<<setw(15)<<Genero<<left<<setw(15)<<DPI<<left<<setw(15)<< nacionalidad<<left<<setw(15)<<direccion<<left<<setw(15)<<telefono<<left<<setw(15)<<civil<<left<<setw(15)<<fechanaci<<left<<setw(15)<<anoingre<<"\n";
 				encontrado++;
 			}
-			archivo >> id >> nombre >> Genero >> DPI >> direccion >> telefono;
+		archivo >> id >> nombre >> Genero >> DPI >> nacionalidad >> direccion >> telefono >> civil >> fechanaci >> anoingre;
 
 		}
 		archivoTemporal.close();
 		archivo.close();
-		remove("RegistroEstudiante.txt");
-		rename("Temporal.txt","RegistroEstudiante.txt");
+		remove("RegistroPersonas.txt");
+		rename("Temporal.txt","RegistroPersonas.txt");
 	}
 }
 void persona::buscar()
@@ -207,7 +235,7 @@ void persona::buscar()
 	system("cls");
 	fstream archivo;
 	int encontrado=0;
-	archivo.open("RegistroEstudiante.txt",ios::in);
+	archivo.open("RegistroPersonas.txt",ios::in);
 	if(!archivo)
 	{
         cout<<"+-----------------------------------------------------------------------------+"<<endl;
@@ -226,22 +254,26 @@ void persona::buscar()
 		cout<<"                Ingrese el ID del estudiante que desea buscar: ";
 		cin>>idPersona;
         cout<<"+-----------------------------------------------------------------------------+"<<endl;
-		archivo >> id >> nombre >> Genero >> DPI >> direccion >> telefono;
+		archivo >> id >> nombre >> Genero >> DPI >> nacionalidad >> direccion >> telefono >> civil >> fechanaci >> anoingre;
 		while(!archivo.eof())
 		{
 			if(idPersona==id)
 			{
-        cout<<"                     Mostrando -> ID estudiantes: "<<id<<endl;
-        cout<<"                     Mostrando -> Nombre estudiante: "<<nombre<<endl;
-        cout<<"                     Mostrando -> Telefono estudiante: "<<Genero<<endl;
-        cout<<"                     Mostrando -> DPI estudiante: "<<DPI<<endl;
-        cout<<"                     Mostrando -> Direccion estudiante: "<<direccion<<endl;
-        cout<<"                     Mostrando -> Telefono estudiante" <<telefono << endl;
+        cout<<"                        Mostrando -> ID del estudiante: "<<id <<endl;
+    cout<<"                        Mostrando -> Nombre del estudiante: "  << nombre << endl;
+    cout<<"                        Mostrando -> Genero: " << Genero <<endl;
+    cout<<"                        Mostrando -> DPI : " << DPI <<endl;
+    cout<<"                        Mostrando -> Direccion: " << direccion <<endl;
+    cout<<"                        Mostrando -> Nacionalidad: " << nacionalidad << endl;
+    cout<<"                        Mostrando -> Telefono:  " << telefono << endl;
+    cout<<"                        Mostrando -> Estado Civil:  " << civil << endl;
+    cout<<"                        Mostrando -> Fecha de nacimiento:  " << fechanaci << endl;
+    cout<<"                        Mostrando -> Ano de ingreso:  " << anoingre << endl;
         cout<<"+-----------------------------------------------------------------------------+"<<endl;
 
 				encontrado++;
 			}
-			archivo >> id >> nombre >> Genero >> DPI >> direccion >> telefono;
+			archivo >> id >> nombre >> Genero >> DPI >> nacionalidad >> direccion >> telefono >> civil >> fechanaci >> anoingre;
 		}
 		if(encontrado==0)
 		{
@@ -256,46 +288,40 @@ void persona::borrar()
 	fstream archivo, archivoTemporal;
 	string idPersona;
 	int encontrado=0;
-    cout<<"+--------------------------------------------------------------------------------+"<<endl;
-	cout<<"+                    Detalles de el o la estudiante a Borrar                     +"<<endl;
-    cout<<"+--------------------------------------------------------------------------------+"<<endl;
+    cout<<"+---------------------------------------------------------------------------------+"<<endl;
+	cout<<"+                             Eliminar estudiante                                 +"<<endl;
+    cout<<"+---------------------------------------------------------------------------------+"<<endl;
 
 	archivo.open("RegistroPersonas.txt",ios::in);
 	if(!archivo)
 	{
-		cout<<"ERROR, NO SE ENCUENTRA INFORMACION...";
+		cout<<"Error, no se encuentra informacion...";
 		archivo.close();
 	}
 	else
 	{
-		cout<<"              Ingrese el ID del estudiante que desea borrar: ";
+		cout<<"-> Ingrese el ID de la persona que desea eliminar: ";
 		cin>>idPersona;
-    cout<<"+--------------------------------------------------------------------------------+"<<endl;
-
+        cout<<"+---------------------------------------------------------------------------------+"<<endl;
 		archivoTemporal.open("Temporal.txt",ios::app | ios::out);
-		archivo >> id >> nombre >> Genero >> DPI >> direccion >> telefono;
+		archivo >> id >> nombre >> Genero >> DPI >> nacionalidad >> direccion >> telefono >> civil >> fechanaci >> anoingre;
 		while(!archivo.eof())
 		{
 			if(idPersona != id)
 			{
-				archivoTemporal<<left<<setw(15)<<id<<left<<setw(15)<<nombre<<left<<setw(15)<<Genero<<left<<setw(15)<<DPI<<left<<setw(15)<<direccion<<left<<setw(15)<<telefono <<"\n";
+				archivoTemporal<<left<<setw(15)<<id<<left<<setw(15)<<nombre<<left<<setw(15)<<Genero<<left<<setw(15)<<DPI<<left<<setw(15)<< nacionalidad<<left<<setw(15)<<direccion<<left<<setw(15)<<telefono<<left<<setw(15)<<civil<<left<<setw(15)<<fechanaci<<left<<setw(15)<<anoingre<<"\n";
 			}
 			else
 			{
-				encontrado++;
-    cout << "             La informacion de la persona ha sido borrada con exito" <<endl;
-    cout<<"+--------------------------------------------------------------------------------+"<<endl;
-
+			    cout << "El alumno llamado: " << nombre << "a sido eliminado con exito.";
+                encontrado++;
 			}
-			archivo >> id >> nombre >> Genero >> DPI >> direccion >> telefono;
-		}
-		if(encontrado==0)
-		{
-			cout<<" ID de estudiante no encontrado...";
+		archivo >> id >> nombre >> Genero >> DPI >> nacionalidad >> direccion >> telefono >> civil >> fechanaci >> anoingre;
+
 		}
 		archivoTemporal.close();
 		archivo.close();
-		remove("RegistroEstudiante.txt");
-		rename("Temporal.txt","RegistroEstudiante.txt");
+		remove("RegistroPersonas.txt");
+		rename("Temporal.txt","RegistroPersonas.txt");
 	}
 }

@@ -1,4 +1,0 @@
-9959-24-5726   Simon          Hombre         90990          zona1          31341231       
-9959-24-6515   Juan           Hombre         889127739      Zona11         9876512        
-9959-24-7730   Marco          Masculino      99838812779    villanueva     8173881        
-9959-24-2538   Jose           Masculino      12909321       zona2          12334          

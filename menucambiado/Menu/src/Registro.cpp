@@ -5,7 +5,7 @@
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
-#include <persona.h>
+#include <alumnos.h>
 #include <maestros.h>
 
 
@@ -35,8 +35,8 @@ void Registro::menuR()
 
     if (elec==1)
     {
-        persona persona;
-    persona.menu();
+        alumnos alumnos;
+    alumnos.menu();
     }
     else if (elec==2)
     {

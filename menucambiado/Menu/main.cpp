@@ -1,9 +1,7 @@
 #include <iostream>
-#include "persona.h"
+#include "alumnos.h"
 #include "maestros.h"
 #include "Registro.h"
-#include "menunotas.h"
-#include "menucursos.h"
 
 using namespace std;
 
@@ -19,12 +17,9 @@ int main()
         cout << "|  Bienvenido al sistema de la Univeridad umg   |" << endl;
         cout << "+-----------------------------------------------+" << endl;
         cout << "|            1. Agregar Registros               |" << endl;
-        cout << "|            2. Agregar Asignacion              |" << endl;
-        cout << "|            3. Tesoreria                       |" << endl;
-        cout << "|            4. Asignacion de notas             |" << endl;
-        cout << "|            5. Salida                          |" << endl;
+        cout << "|            2. Salida                          |" << endl;
         cout << "+-----------------------------------------------+" << endl;
-        cout << "|         Ingrese su opcion [1/2/3/4]           |" << endl;
+        cout << "|            Ingrese su opcion [1/2]            |" << endl;
         cout << "+-----------------------------------------------+" << endl;
         cin >> opcion;
 
@@ -36,19 +31,6 @@ int main()
                 Registros.menuR();
                 break;
             case 2:
-                system("cls");
-                menucursos cursos;
-                cursos.MenuC();
-                break;
-            case 3:
-                cout << "En este apartado se crear el menu para la tesoreria"<< endl;
-                system("pause");
-                break;
-            case 4:
-                cout << "En este apartado se crear el menu para la Asignacion de notas"<< endl;
-                system("pause");
-                break;
-            case 5:
                 cout << "Saliendo del programa..." << endl;
                 continuar = 'n';
                 break;

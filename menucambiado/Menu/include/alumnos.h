@@ -1,5 +1,5 @@
-#ifndef PERSONA_H
-#define PERSONA_H
+#ifndef ALUMNOS_H
+#define ALUMNOS_H
 #include<iostream>
 #include<fstream>
 #include<stdlib.h>
@@ -9,10 +9,10 @@
 
 using namespace std;
 
-class persona
+class alumnos
 {
     private:
-    string id,name,phone,college,address,Genero;
+    string id,name,phone,college,address,Genero,Nacionalidadad,EstadoCivil,FechaNacimiento,AnoIngreso;
     public:
         void menu();
         void insertar();
@@ -22,5 +22,4 @@ class persona
         void borrar();
 };
 
-
-#endif // ARCHIVO_H
+#endif // ALUMNOS_H
