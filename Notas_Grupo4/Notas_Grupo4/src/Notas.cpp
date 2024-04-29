@@ -42,7 +42,7 @@ void Notas::menuNotas()  //Creación de constructor menuNotas
         cout<<"\t\t\t 2. Despliegue notas"<<endl;//menu que puede servir para las actas
 
 
-        cout<<"\t\t\t 3. Modifica Notas "<<endl;
+        cout<<"\t\t\t 3. Modifica Notas (NO FUNCIONA DEL TODO, DE MOMENTO NO USAR) "<<endl;
         cout<<"\t\t\t 4. Buscar Notas"<<endl;
         cout<<"\t\t\t 5. Borrar Notass"<<endl;
         cout<<"\t\t\t 6. Salir de Menu"<<endl;
@@ -159,7 +159,7 @@ void Notas::menuNotas()  //Creación de constructor menuNotas
 
 
 		//	cout<<"\t\t\t PIN de Notas: "<<PIN<<endl;
-			file >> id >> nombre >> notaP1 >>notaP2>>actividad >>notaFinal>>PIN;
+			file >> id >> nombre >> notaP1 >> notaP2 >> actividad >> notaFinal>> PIN;
 		}
 		if(total==0)
 		{
@@ -173,7 +173,7 @@ void Notas::menuNotas()  //Creación de constructor menuNotas
 {
 	system("cls");
 	fstream file,file1;
-	string jugador_id;
+    string jugador_id;
 	int found=0;
 	cout<<"\n------------------------- \"Modificacion Detalles Notas\" -------------------------"<<endl;
 	file.open("Notas.txt",ios::in);
@@ -222,6 +222,7 @@ void Notas::menuNotas()  //Creación de constructor menuNotas
 		file.close();
 		remove("Notas.txt");
 		rename("Record.txt","Notas.txt");
+
 	}
 }
 
@@ -299,7 +300,7 @@ void Notas::menuNotas()  //Creación de constructor menuNotas
 				found++;
 				cout << "\n\t\t\tBorrado de Notas exitoso";
 			}
-			file >> id >> nombre >> notaP1 >>notaP2 >>notaFinal >>PIN;
+			file >> id >> nombre >> notaP1 >>notaP2 >>notaFinal>>actividad >>PIN;
 		}
 		if(found==0)
 		{
@@ -309,5 +310,9 @@ void Notas::menuNotas()  //Creación de constructor menuNotas
 		file.close();
 		remove("Notas.txt");
 		rename("Record.txt","Notas.txt");
+
+		//en esta seccion falta hacer lo de la bitacora
+		//ya que si se realiza se hace un bucle en la creacion de notas
+
 	}
 }

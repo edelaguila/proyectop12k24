@@ -56,3 +56,12 @@
 	<iomanip>
 	<string>
 
+1714363629 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\notas_grupo4\notas_grupo4\src\notas.cpp
+	"Notas.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
