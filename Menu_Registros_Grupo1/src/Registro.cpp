@@ -5,7 +5,7 @@
 #include<cstdlib>
 #include<conio.h>
 #include<iomanip>
-
+#include <maestros.h>
 
 using namespace std;
 
@@ -37,6 +37,7 @@ void Registro::menuR()
     }
     else if (elec==2)
     {
-
+        maestros maestro;
+        maestro.menu();
     }
  }
