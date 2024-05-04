@@ -41,3 +41,36 @@
 	<conio.h>
 	<iomanip>
 
+1714783540 source:d:\proyecto u\proyectop12k24\menu_registros_grupo1\main.cpp
+	<iostream>
+	"Registro.h"
+
+1714783540 d:\proyecto u\proyectop12k24\menu_registros_grupo1\include\registro.h
+
+1714783540 source:d:\proyecto u\proyectop12k24\menu_registros_grupo1\src\registro.cpp
+	"Registro.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<maestros.h>
+
+1714784035 d:\proyecto u\proyectop12k24\menu_registros_grupo1\include\maestros.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1714784035 source:d:\proyecto u\proyectop12k24\menu_registros_grupo1\src\maestros.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+

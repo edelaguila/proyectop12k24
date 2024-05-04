@@ -9,7 +9,7 @@
 
 using namespace std;
 //creando clase maestros por jose Gallardo 9959-23-106 (menu, insertar, desplegar)
-
+//Creando clase maestros por Andre Gonzalez 9959-23-3117 (Modificar, buscar, borrar)
 class maestros
 {
 	private:
@@ -18,6 +18,9 @@ class maestros
 		void menu();
 		void insertar();
 		void desplegar();
+		void modificar();
+		void buscar();
+		void borrar();
 
 };
 
