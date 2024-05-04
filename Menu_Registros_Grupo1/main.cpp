@@ -1,3 +1,5 @@
+//Menu General creado por Oscar Morales 9959-23-3070
+
 #include <iostream>
 
 using namespace std;
