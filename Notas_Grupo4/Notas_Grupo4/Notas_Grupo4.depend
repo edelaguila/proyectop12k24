@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1714096474 source:c:\users\ruddyard\desktop\notas_grupo4\main.cpp
+	<iostream>
+	<Notas.h>
+
+1714096539 source:c:\users\ruddyard\desktop\notas_grupo4\src\notas.cpp
+	"Notas.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1714096687 c:\users\ruddyard\desktop\notas_grupo4\include\notas.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1714353224 source:c:\users\usuario\desktop\rocio\progra 1\notas_grupo4\notas_grupo4\main.cpp
+	<iostream>
+	<Notas.h>
+
+1714353635 c:\users\usuario\desktop\rocio\progra 1\notas_grupo4\notas_grupo4\include\notas.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1714351039 source:c:\users\usuario\desktop\rocio\progra 1\notas_grupo4\notas_grupo4\src\notas.cpp
+	"Notas.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1714353224 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\notas_grupo4\notas_grupo4\main.cpp
+	<iostream>
+	<Notas.h>
+
+1714353635 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\notas_grupo4\notas_grupo4\include\notas.h
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	<string>
+
+1714363629 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24\notas_grupo4\notas_grupo4\src\notas.cpp
+	"Notas.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
