@@ -1,0 +1,206 @@
+# depslib dependency file v1.0
+1715015871 source:d:\umg\programacion1\proyecto grupal\proyectop12k24b\proyecto_umg\main.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"usuarios.h"
+
+1715014930 d:\umg\programacion1\proyecto grupal\proyectop12k24b\proyecto_umg\include\usuarios.h
+	<iostream>
+
+1715015890 source:d:\umg\programacion1\proyecto grupal\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+
+1715023362 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+
+1715022987 c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\include\usuarios.h
+	<iostream>
+
+1715021907 source:c:\users\oskar\onedrive\escritorio\tercer semestre\programación i\programas exportados de github\proyectop12k24b\proyecto_umg\main.cpp
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+	"usuarios.h"
+
+1715034822 source:c:\users\josue\onedrive\escritorio\proyecto 2\proyectop12k24b\proyecto_umg\main.cpp
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	"usuarios.h"
+	"Login.h"
+
+1715023712 c:\users\josue\onedrive\escritorio\proyecto 2\proyectop12k24b\proyecto_umg\include\usuarios.h
+	<iostream>
+
+1715030680 source:c:\users\josue\onedrive\escritorio\proyecto 2\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+
+1715034505 source:c:\users\josue\onedrive\escritorio\proyecto 2\proyectop12k24b\proyecto_umg\src\login.cpp
+	"Login.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715034512 c:\users\josue\onedrive\escritorio\proyecto 2\proyectop12k24b\proyecto_umg\include\login.h
+	<iostream>
+	<fstream>
+	<string>
+
+1715116857 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24b\proyecto_umg\main.cpp
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	"usuarios.h"
+	"Login.h"
+	"aulas.h"
+	"secciones.h"
+
+1715054909 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24b\proyecto_umg\include\usuarios.h
+	<iostream>
+
+1715054909 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24b\proyecto_umg\include\login.h
+	<iostream>
+	<fstream>
+	<string>
+
+1715054909 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24b\proyecto_umg\src\login.cpp
+	"Login.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715054909 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+
+1715116053 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24b\proyecto_umg\src\aulas.cpp
+	"aulas.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715117388 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24b\proyecto_umg\include\aulas.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715054909 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24b\proyecto_umg\src\seguridad.cpp
+	"seguridad.h"
+
+1715054909 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24b\proyecto_umg\include\seguridad.h
+
+1715116820 source:c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24b\proyecto_umg\src\secciones.cpp
+	"secciones.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715117388 c:\users\usuario\desktop\rocio\progra 1\proyecto grupal\proyectop12k24b\proyecto_umg\include\secciones.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715118833 source:c:\users\ruddyard\desktop\2024\progra i\sistmaumg_b\proyectop12k24b\proyecto_umg\main.cpp
+	<iostream>
+	<cstdlib>
+	<conio.h>
+	"usuarios.h"
+	"Login.h"
+	"aulas.h"
+	"secciones.h"
+
+1715118833 c:\users\ruddyard\desktop\2024\progra i\sistmaumg_b\proyectop12k24b\proyecto_umg\include\usuarios.h
+	<iostream>
+
+1715118833 c:\users\ruddyard\desktop\2024\progra i\sistmaumg_b\proyectop12k24b\proyecto_umg\include\login.h
+	<iostream>
+	<fstream>
+	<string>
+
+1715118833 c:\users\ruddyard\desktop\2024\progra i\sistmaumg_b\proyectop12k24b\proyecto_umg\include\aulas.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715134385 c:\users\ruddyard\desktop\2024\progra i\sistmaumg_b\proyectop12k24b\proyecto_umg\include\secciones.h
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715118833 source:c:\users\ruddyard\desktop\2024\progra i\sistmaumg_b\proyectop12k24b\proyecto_umg\src\aulas.cpp
+	"aulas.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715124880 source:c:\users\ruddyard\desktop\2024\progra i\sistmaumg_b\proyectop12k24b\proyecto_umg\src\login.cpp
+	"Login.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715131225 source:c:\users\ruddyard\desktop\2024\progra i\sistmaumg_b\proyectop12k24b\proyecto_umg\src\secciones.cpp
+	"secciones.h"
+	<fstream>
+	<iostream>
+	<stdlib.h>
+	<cstdlib>
+	<conio.h>
+	<iomanip>
+
+1715118833 source:c:\users\ruddyard\desktop\2024\progra i\sistmaumg_b\proyectop12k24b\proyecto_umg\src\seguridad.cpp
+	"seguridad.h"
+
+1715118833 c:\users\ruddyard\desktop\2024\progra i\sistmaumg_b\proyectop12k24b\proyecto_umg\include\seguridad.h
+
+1715118833 source:c:\users\ruddyard\desktop\2024\progra i\sistmaumg_b\proyectop12k24b\proyecto_umg\src\usuarios.cpp
+	"usuarios.h"
+	<fstream>
+	<cstdlib>
+	<conio.h>
+	<iostream>
+
